@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7322E4661E145906003A6410 /* Medea.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7322E45C1E145905003A6410 /* Medea.framework */; };
-		7322E46B1E145906003A6410 /* JSONHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7322E46A1E145906003A6410 /* JSONHelperTests.swift */; };
+		7322E46B1E145906003A6410 /* JSONObjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7322E46A1E145906003A6410 /* JSONObjectTests.swift */; };
+		7382E6B11E20302200021C9C /* JSONArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7382E6AF1E20301F00021C9C /* JSONArrayTests.swift */; };
 		7393BA661E145C0C00485518 /* Medea.h in Headers */ = {isa = PBXBuildFile; fileRef = 7322E45F1E145905003A6410 /* Medea.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7393BA681E145CC600485518 /* JSONHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7393BA671E145CC600485518 /* JSONHelper.swift */; };
 		7393BA6A1E14615600485518 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7393BA691E14615600485518 /* Types.swift */; };
@@ -28,7 +29,8 @@
 		7322E45C1E145905003A6410 /* Medea.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Medea.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7322E45F1E145905003A6410 /* Medea.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Medea.h; sourceTree = SOURCE_ROOT; };
 		7322E4651E145906003A6410 /* MedeaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MedeaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7322E46A1E145906003A6410 /* JSONHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONHelperTests.swift; sourceTree = "<group>"; };
+		7322E46A1E145906003A6410 /* JSONObjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONObjectTests.swift; sourceTree = "<group>"; };
+		7382E6AF1E20301F00021C9C /* JSONArrayTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONArrayTests.swift; sourceTree = "<group>"; };
 		7393BA671E145CC600485518 /* JSONHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONHelper.swift; sourceTree = "<group>"; };
 		7393BA691E14615600485518 /* Types.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -84,7 +86,8 @@
 		7322E4691E145906003A6410 /* MedeaTests */ = {
 			isa = PBXGroup;
 			children = (
-				7322E46A1E145906003A6410 /* JSONHelperTests.swift */,
+				7322E46A1E145906003A6410 /* JSONObjectTests.swift */,
+				7382E6AF1E20301F00021C9C /* JSONArrayTests.swift */,
 			);
 			name = MedeaTests;
 			path = ../Tests;
@@ -212,7 +215,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7322E46B1E145906003A6410 /* JSONHelperTests.swift in Sources */,
+				7322E46B1E145906003A6410 /* JSONObjectTests.swift in Sources */,
+				7382E6B11E20302200021C9C /* JSONArrayTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

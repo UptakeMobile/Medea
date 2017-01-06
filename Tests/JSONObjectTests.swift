@@ -1,9 +1,9 @@
 import XCTest
 import Medea
 
-class JSONHelperTests: XCTestCase {
+class JSONObjectTests: XCTestCase {
   func testRawObject() {
-    let subject = try! JSONHelper.json(from: "{\"foo\": \"bar\"}")
+    let subject = try! JSONHelper.jsonObject(from: "{\"foo\": \"bar\"}")
     XCTAssertEqual(subject["foo"] as! String, "bar")
   }
   
@@ -11,7 +11,7 @@ class JSONHelperTests: XCTestCase {
   func testRawJSONArray() {
     let shouldThrow = expectation(description: "throws notJSONObject error")
     do {
-      let _ = try JSONHelper.json(from: "[1,2,3]")
+      let _ = try JSONHelper.jsonObject(from: "[1,2,3]")
     } catch JSONError.nonObject {
       shouldThrow.fulfill()
     } catch {}
@@ -22,7 +22,7 @@ class JSONHelperTests: XCTestCase {
   func testInvalidRawJSON() {
     let shouldThrow = expectation(description: "should not parse")
     do {
-      let _ = try JSONHelper.json(from: "foobarbaz")
+      let _ = try JSONHelper.jsonObject(from: "foobarbaz")
     } catch JSONError.malformed {
       shouldThrow.fulfill()
     } catch {}
@@ -33,7 +33,7 @@ class JSONHelperTests: XCTestCase {
   func testInvalidByOmission() {
     let shouldThrow = expectation(description: "should not parse")
     do {
-      let _ = try JSONHelper.json(from: "")
+      let _ = try JSONHelper.jsonObject(from: "")
     } catch JSONError.malformed {
       shouldThrow.fulfill()
     } catch {}
@@ -42,7 +42,7 @@ class JSONHelperTests: XCTestCase {
   
   
   func testEmptyRawJSON() {
-    let subject = try! JSONHelper.json(from: "{}")
+    let subject = try! JSONHelper.jsonObject(from: "{}")
     XCTAssert(subject.isEmpty)
   }
   
