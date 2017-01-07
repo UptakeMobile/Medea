@@ -68,4 +68,13 @@ class JSONObjectTests: XCTestCase {
     let subject = try! JSONHelper.string(from: [:])
     XCTAssertEqual(subject, "{}")
   }
+  
+  
+  func testValidate() {
+    XCTAssert(JSONHelper.validate("{\"foo\":42}"))
+    XCTAssert(JSONHelper.validate("{\"one\": \"two\"}"))
+    XCTAssertFalse(JSONHelper.validate("{1:2}"))
+    XCTAssertFalse(JSONHelper.validate(""))
+    XCTAssertFalse(JSONHelper.validate("foobar"))
+  }
 }

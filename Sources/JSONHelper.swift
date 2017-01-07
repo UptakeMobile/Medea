@@ -46,6 +46,23 @@ public enum JSONHelper {
   }
   
   
+  //MARK: - UTIL
+  public static func validate(_ string: String) -> Bool {
+    return validate(data(from: string))
+  }
+  
+  
+  public static func validate(_ data: Data) -> Bool {
+    if let _ = try? jsonObject(from: data) {
+      return true
+    }
+    if let _ = try? jsonArray(from: data) {
+      return true
+    }
+    return false
+  }
+  
+  
   //MARK: - Helpers
   private static func anyJSON(from data: Data) throws -> Any {
     do {

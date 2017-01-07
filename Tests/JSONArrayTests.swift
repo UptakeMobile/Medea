@@ -68,4 +68,12 @@ class JSONArrayTests: XCTestCase {
     let subject = try! JSONHelper.string(from: [])
     XCTAssertEqual(subject, "[]")
   }
+  
+  
+  func testValidate() {
+    XCTAssert(JSONHelper.validate("[1,2]"))
+    XCTAssert(JSONHelper.validate("[\"one\", \"two\"]"))
+    XCTAssertFalse(JSONHelper.validate(""))
+    XCTAssertFalse(JSONHelper.validate("foobar"))
+  }
 }
