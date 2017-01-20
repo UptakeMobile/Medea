@@ -63,6 +63,28 @@ public enum JSONHelper {
   }
   
   
+  /// Validates whether the given `JSONObject` contains only valid JSON types.
+  /// * parameter jsonObject: The object to validate.
+  /// * returns: `true` if `jsonObject` contains only types representable in JSON. Otherwise: `false`.
+  public static func validate(_ jsonObject: JSONObject) -> Bool {
+    if let _ = try? dataFromAny(jsonObject) {
+      return true
+    }
+    return false
+  }
+  
+  
+  /// Validates whether the given `JSONArray` contains only valid JSON types.
+  /// * parameter jsonArray: The array to validate.
+  /// * returns: `true` if `jsonArray` contains only types representable in JSON. Otherwise: `false`.
+  public static func validate(_ jsonArray: JSONArray) -> Bool {
+    if let _ = try? dataFromAny(jsonArray) {
+      return true
+    }
+    return false
+  }
+  
+  
   //MARK: - Helpers
   private static func anyJSON(from data: Data) throws -> Any {
     do {

@@ -73,7 +73,9 @@ class JSONArrayTests: XCTestCase {
   func testValidate() {
     XCTAssert(JSONHelper.validate("[1,2]"))
     XCTAssert(JSONHelper.validate("[\"one\", \"two\"]"))
+    XCTAssert(JSONHelper.validate(["foo", 42, false, NSNull()]))
     XCTAssertFalse(JSONHelper.validate(""))
     XCTAssertFalse(JSONHelper.validate("foobar"))
+    XCTAssertFalse(JSONHelper.validate([Date()]))
   }
 }
