@@ -1,57 +1,102 @@
 import Foundation
 
 
+
+/// `JSONHelper` is a bag of functions for converting to and from JSON representations. It's a *very* thin wrapper around `JSONSerialization` that also:
+/// * Is *explicit* about whether JSON is expected to be an object or an array, throwing an error if an unexpected type is encountered.
+/// * Handles all the conversions between `Data` and `String`, elimitating a lot of `Optional`s and `guards` in the process.
+/// * Converts some common `JSONSerialization` errors out of the `NSCocoaErrorDomain` and into the easier-to-catch `JSONError` enum.
+/// * Provides convenience types for `JSONObject` and `JSONArray` to save you from having to type `AnyHashable` or make sens of the oblique `[Any]`.
+/// * Provides easy validation functions for verifying `Data`s, `String`s, `JSONObject`s or `JSONArray`s represent well-formed JSON — without having to chain a bunch of conversions and `try`.
 public enum JSONHelper {
   //MARK: - JSON from Data
+  /// Decodes `Data` representation of a JSON object into a `JSONObject`.
+  /// * parameter data: The bytes of a string representing a JSON object, encoded as UTF-8.
+  /// * throws: Throws standard `Error` if `data` is unreadable or not UTF-8. Throws `JSONError.malformed` if `data` does not represent JSON and `JSONError.nonObject` if `data` represents a JSON array.
+  /// * returns: A `JSONObject` representation of `data`.
   public static func jsonObject(from data: Data) throws -> JSONObject {
     return try jsonObjectFromAny(anyJSON(from: data))
   }
   
   
+  /// Decodes `Data` representation of a JSON array into a `JSONAbject`.
+  /// * parameter data: The bytes of a string representing a JSON array, encoded as UTF-8.
+  /// * throws: Throws standard `Error` if `data` is unreadable or not UTF-8. Throws `JSONError.malformed` if `data` does not represent JSON and `JSONError.nonArray` if `data` represents a JSON object.
+  /// * returns: A `JSONObject` representation of `data`.
   public static func jsonArray(from data: Data) throws -> JSONArray {
     return try jsonArrayFromAny(anyJSON(from: data))
   }
   
   
   //MARK: - JSON from String
+  /// Parses `String` representation of a JSON object into a `JSONObject`.
+  /// * parameter string: A string representing a JSON object.
+  /// * throws: `JSONError.malformed` if `data` does not represent JSON and `JSONError.nonObject` if `data` represents a JSON array.
+  /// * returns: A `JSONObject` representation of `string`.
   public static func jsonObject(from string: String) throws -> JSONObject {
     return try  jsonObjectFromAny(anyJSON(from: data(from: string)))
   }
   
   
+  /// Parses `String` representation of a JSON array into a `JSONArray`.
+  /// * parameter string: A string representing a JSON object.
+  /// * throws: `JSONError.malformed` if `data` does not represent JSON and `JSONError.nonObject` if `data` represents a JSON array.
+  /// * returns: A `JSONObject` representation of `string`.
   public static func jsonArray(from string: String) throws -> JSONArray {
     return try jsonArrayFromAny(anyJSON(from: data(from: string)))
   }
   
   
   //MARK: - Data from JSON
+  /// Serializes a `JSONObject` into `Data`.
+  /// * parameter jsonObject: The JSONObject to serialize.
+  /// * throws: `JSONError.malformed` if `JSONObject` isn't a valid JSON object.
+  /// * returns: The bytes of a string representing a JSON object, encoded as UTF-8.
   public static func data(from jsonObject: JSONObject) throws -> Data {
     return try dataFromAny(jsonObject)
   }
   
   
+  /// Serializes a `JSONArray` into `Data`.
+  /// * parameter jsonArray: The JSONArray to serialize.
+  /// * throws: `JSONError.malformed` if `JSONArray` isn't an array of JSON-safe values.
+  /// * returns: The bytes of a string representing a JSON array, encoded as UTF-8.
   public static func data(from jsonArray: JSONArray) throws -> Data {
     return try dataFromAny(jsonArray)
   }
   
   
   //MARK: - String from JSON
+  /// Serializes a `JSONObject` into a `String`.
+  /// * parameter jsonObject: The JSONObject to serialize.
+  /// * throws: `JSONError.malformed` if `JSONObject` isn't a valid JSON object. `StringError.encoding` will be thrown if the serialized JSON can't be represented by a UTF-8 string, but that should be impossible.
+  /// * returns: A string representing a JSON object, encoded as UTF-8.
   public static func string(from json: JSONObject) throws -> String {
     return try string(from: data(from: json))
   }
 
   
+  /// Serializes a `JSONArray` into a `String`.
+  /// * parameter jsonArray: The JSONArray to serialize.
+  /// * throws: `JSONError.malformed` if `JSONArray` isn't an array of JSON-safe values. `StringError.encoding` will be thrown if the serialized JSON can't be represented by a UTF-8 string, but that should be impossible.
+  /// * returns: A string representing a JSON array, encoded as UTF-8.
   public static func string(from json: JSONArray) throws -> String {
     return try string(from: data(from: json))
   }
   
   
   //MARK: - UTIL
+  /// Validates whether the given `String` is well-formed JSON.
+  /// * parameter string: The string to validate.
+  /// * returns: `true` if the string represents valid JSON. Otherwise: `false`.
   public static func validate(_ string: String) -> Bool {
     return validate(data(from: string))
   }
   
   
+  /// Validates whether the given bytes represent well-formed JSON string.
+  /// * parameter data: The bytes to validate.
+  /// * returns: `true` if `data` represents the bytes of a UTF-8 encoded string, and said string depicts valid JSON. Otherwise: `false`.
   public static func validate(_ data: Data) -> Bool {
     if let _ = try? jsonObject(from: data) {
       return true
