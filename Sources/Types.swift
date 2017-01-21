@@ -20,6 +20,7 @@ public enum JSONError: Error {
 
 
 
+/// String conversion errors.
 public enum StringError: Error {
   /// Thrown when JSON decodes into a string that is not UTF-8. This should be impossible.
   case encoding

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html"> Docs</a> (100% documented)</p>
+        <p class="header-right"><a href="https://github.com/jemmons/Medea"><img src="img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html"> Reference</a>
+        <img id="carat" src="img/carat.png" />
+          Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Public Interface.html">Public Interface</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/JSONHelper.html">JSONHelper</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Other Enums.html">Other Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/JSONError.html">JSONError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/StringError.html">StringError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Other Typealiases.html">Other Typealiases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Other Typealiases.html#/s:5Medea9JSONArray">JSONArray</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Other Typealiases.html#/s:5Medea10JSONObject">JSONObject</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <a href='#medea' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='medea'>Medea</h1>
+
+<p><a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage compatible"></a></p>
+
+<p>A bag of functions (living in <code>JSONHelper</code>) for converting to and from JSON representations. It&rsquo;s a <em>very</em> thin wrapper around <code>JSONSerialization</code> that also:</p>
+
+<ul>
+<li><p>Is <em>explicit</em> about whether JSON is expected to be an object or an array, throwing an error if an unexpected type is encountered.</p></li>
+<li><p>Handles all the conversions between <code>Data</code> and <code>String</code>, eliminating a lot of <code>Optional</code>s and <code>guards</code> in the process.</p></li>
+<li><p>Converts some common <code>JSONSerialization</code> errors out of the <code>NSCocoaErrorDomain</code> and into the easier-to-catch <code>JSONError</code> enum.</p></li>
+<li><p>Provides convenience types for <code>JSONObject</code> and <code>JSONArray</code> to save you from having to type <code>AnyHashable</code> or make sense of the oblique <code>[Any]</code>.</p></li>
+<li><p>Provides easy validation functions for verifying <code>Data</code>s, <code>String</code>s, <code>JSONObject</code>s or <code>JSONArray</code>s represent well-formed JSON — without having to chain a bunch of conversions and <code>try</code>.</p></li>
+</ul>
+<a href='#usage' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='usage'>Usage</h2>
+<a href='#from-json' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='from-json'>From JSON</h3>
+<pre class="highlight plaintext"><code>let object  = try JSONHelper.jsonObject(from: "{\"foo\": 42}")
+let array   = try JSONHelper.jsonArray(from: "[42, 64, 10175]")
+let isValid = JSONHelper.validate("{\"numbers\": [1,2,3]}")
+</code></pre>
+<a href='#to-json' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='to-json'>To JSON</h3>
+<pre class="highlight plaintext"><code>let jsonString = try JSONHelper.string(from: ["foo": 42])
+let jsonData   = try JSONHelper.data(from: [42, 64, 10175])
+let isValid    = JSONHelper.validate(["invalid": Date()])
+</code></pre>
+<a href='#api' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='api'>API</h2>
+
+<p>Full API documentation <a href="https://jemmons.github.io/Medea/">can be found here</a>.</p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2017 <a class="link" href="https://figure.ink" target="_blank" rel="external">Joshua Emmons</a>. All rights reserved. (Last updated: 2017-01-21)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

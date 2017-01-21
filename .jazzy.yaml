@@ -1,0 +1,12 @@
+clean: true
+author: Joshua Emmons
+author_url: https://figure.ink
+github_url: https://github.com/jemmons/Medea
+xcodebuild_arguments: 
+  - '-project'
+  - 'Support/Medea.xcodeproj'
+  
+custom_categories:
+  - name: Public Interface
+    children:
+    - JSONHelper
