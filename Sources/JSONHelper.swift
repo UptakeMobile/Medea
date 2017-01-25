@@ -111,8 +111,8 @@ public enum JSONHelper {
    * parameter string: The string to validate.
    * returns: `true` if the string represents valid JSON. Otherwise: `false`.
    */
-  public static func validate(_ string: String) -> Bool {
-    return validate(data(from: string))
+  public static func isValid(_ string: String) -> Bool {
+    return isValid(data(from: string))
   }
   
   
@@ -122,7 +122,7 @@ public enum JSONHelper {
    * parameter data: The bytes to validate.
    * returns: `true` if `data` represents the bytes of a UTF-8 encoded string, and said string depicts valid JSON. Otherwise: `false`.
    */
-  public static func validate(_ data: Data) -> Bool {
+  public static func isValid(_ data: Data) -> Bool {
     if let _ = try? jsonObject(from: data) {
       return true
     }
@@ -139,7 +139,7 @@ public enum JSONHelper {
    * parameter jsonObject: The object to validate.
    * returns: `true` if `jsonObject` contains only types representable in JSON. Otherwise: `false`.
    */
-  public static func validate(_ jsonObject: JSONObject) -> Bool {
+  public static func isValid(_ jsonObject: JSONObject) -> Bool {
     if let _ = try? dataFromAny(jsonObject) {
       return true
     }
@@ -153,7 +153,7 @@ public enum JSONHelper {
    * parameter jsonArray: The array to validate.
    * returns: `true` if `jsonArray` contains only types representable in JSON. Otherwise: `false`.
    */
-  public static func validate(_ jsonArray: JSONArray) -> Bool {
+  public static func isValid(_ jsonArray: JSONArray) -> Bool {
     if let _ = try? dataFromAny(jsonArray) {
       return true
     }

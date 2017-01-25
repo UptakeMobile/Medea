@@ -71,14 +71,14 @@ class JSONObjectTests: XCTestCase {
   
   
   func testValidate() {
-    XCTAssert(JSONHelper.validate("{\"foo\":42}"))
-    XCTAssert(JSONHelper.validate("{\"one\": \"two\"}"))
-    XCTAssert(JSONHelper.validate(["foo": 42, "bar": false, "baz": NSNull()]))
-    XCTAssertFalse(JSONHelper.validate("{1:2}"))
-    XCTAssertFalse(JSONHelper.validate(""))
-    XCTAssertFalse(JSONHelper.validate("foobar"))
-    XCTAssertFalse(JSONHelper.validate("foobar"))
-    XCTAssertFalse(JSONHelper.validate([42: "non-numeric key"]))
-    XCTAssertFalse(JSONHelper.validate(["non-representable": Date()]))
+    XCTAssert(JSONHelper.isValid("{\"foo\":42}"))
+    XCTAssert(JSONHelper.isValid("{\"one\": \"two\"}"))
+    XCTAssert(JSONHelper.isValid(["foo": 42, "bar": false, "baz": NSNull()]))
+    XCTAssertFalse(JSONHelper.isValid("{1:2}"))
+    XCTAssertFalse(JSONHelper.isValid(""))
+    XCTAssertFalse(JSONHelper.isValid("foobar"))
+    XCTAssertFalse(JSONHelper.isValid("foobar"))
+    XCTAssertFalse(JSONHelper.isValid([42: "non-numeric key"]))
+    XCTAssertFalse(JSONHelper.isValid(["non-representable": Date()]))
   }
 }

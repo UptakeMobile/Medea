@@ -71,11 +71,11 @@ class JSONArrayTests: XCTestCase {
   
   
   func testValidate() {
-    XCTAssert(JSONHelper.validate("[1,2]"))
-    XCTAssert(JSONHelper.validate("[\"one\", \"two\"]"))
-    XCTAssert(JSONHelper.validate(["foo", 42, false, NSNull()]))
-    XCTAssertFalse(JSONHelper.validate(""))
-    XCTAssertFalse(JSONHelper.validate("foobar"))
-    XCTAssertFalse(JSONHelper.validate([Date()]))
+    XCTAssert(JSONHelper.isValid("[1,2]"))
+    XCTAssert(JSONHelper.isValid("[\"one\", \"two\"]"))
+    XCTAssert(JSONHelper.isValid(["foo", 42, false, NSNull()]))
+    XCTAssertFalse(JSONHelper.isValid(""))
+    XCTAssertFalse(JSONHelper.isValid("foobar"))
+    XCTAssertFalse(JSONHelper.isValid([Date()]))
   }
 }
