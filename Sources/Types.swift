@@ -14,8 +14,10 @@ public enum JSONError: Error {
   case nonObject
   /// Thrown when expecting to convert to or from a `JSONArray` but a `JSONObject` is encountered instead.
   case nonArray
-  /// Thrown when a string to be parsed is not valid JSON. Also thrown when a `JSONArray` or `JSONObject` contains types that are illegal in JSON.
+  /// Thrown when a string representation cannot be parsed as JSON.
   case malformed
+  /// Thrown when a `JSONArray` or `JSONObject` contains types that are illegal in JSON.
+  case invalid
 }
 
 

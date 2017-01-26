@@ -54,11 +54,19 @@ class JSONObjectTests: XCTestCase {
   
   
   func testInvaidJSONObject() {
-    let shouldThrow = expectation(description: "should not parse")
+    let shouldRejectKey = expectation(description: "invalid JSON key")
+    let shouldRejectValue = expectation(description: "invalid JSON value")
+
+    do {
+      let _ = try JSONHelper.string(from: [42: "foo"])
+    } catch JSONError.invalid {
+      shouldRejectKey.fulfill()
+    } catch {}
+
     do {
       let _ = try JSONHelper.string(from: ["date": Date()])
-    } catch JSONError.malformed {
-      shouldThrow.fulfill()
+    } catch JSONError.invalid {
+      shouldRejectValue.fulfill()
     } catch {}
     waitForExpectations(timeout: 0.1, handler: nil)
   }
@@ -70,15 +78,50 @@ class JSONObjectTests: XCTestCase {
   }
   
   
-  func testValidate() {
+  func testIsValid() {
     XCTAssert(JSONHelper.isValid("{\"foo\":42}"))
     XCTAssert(JSONHelper.isValid("{\"one\": \"two\"}"))
     XCTAssert(JSONHelper.isValid(["foo": 42, "bar": false, "baz": NSNull()]))
     XCTAssertFalse(JSONHelper.isValid("{1:2}"))
     XCTAssertFalse(JSONHelper.isValid(""))
     XCTAssertFalse(JSONHelper.isValid("foobar"))
-    XCTAssertFalse(JSONHelper.isValid("foobar"))
     XCTAssertFalse(JSONHelper.isValid([42: "non-numeric key"]))
     XCTAssertFalse(JSONHelper.isValid(["non-representable": Date()]))
   }
+  
+  
+  func testValidate() {
+    _ = try! JSONHelper.validate("{\"foo\":42}")
+    _ = try! JSONHelper.validate("{\"one\": \"two\"}")
+    _ = try! JSONHelper.validate(["foo": 42, "bar": false, "baz": NSNull()])
+
+    let shouldRejectStringKey = expectation(description: "string with bad key")
+    let shouldRejectEmptyString = expectation(description: "empty string")
+    let shouldRejectString = expectation(description: "string")
+    let shouldRejectKey = expectation(description: "bad key")
+    let shouldRejectValue = expectation(description: "bad value")
+    
+    do { try JSONHelper.validate("{1:2}") } catch JSONError.malformed {
+      shouldRejectStringKey.fulfill()
+    } catch { }
+    
+    do { try JSONHelper.validate("") } catch JSONError.malformed {
+      shouldRejectEmptyString.fulfill()
+    } catch { }
+    
+    do { try JSONHelper.validate("foobar") } catch JSONError.malformed {
+      shouldRejectString.fulfill()
+    } catch { }
+
+    do { try JSONHelper.validate([42: "non-numeric key"]) } catch JSONError.invalid {
+      shouldRejectKey.fulfill()
+    } catch { }
+
+    do { try JSONHelper.validate(["non-representable": Date()]) } catch JSONError.invalid {
+      shouldRejectValue.fulfill()
+    } catch { }
+    
+    waitForExpectations(timeout: 1.0, handler: nil)
+  }
+
 }

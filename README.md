@@ -21,7 +21,8 @@ A bag of functions (living in `JSONHelper`) for converting to and from JSON repr
 ```swift
 let object  = try JSONHelper.jsonObject(from: "{\"foo\": 42}")
 let array   = try JSONHelper.jsonArray(from: "[42, 64, 10175]")
-let isValid = JSONHelper.validate("{\"numbers\": [1,2,3]}")
+let isValid = JSONHelper.isValid("{\"numbers\": [1,2,3]}")
+try JSONHelper.validate("[1,true,null]")
 ```
 
 ### To JSON:
@@ -29,7 +30,8 @@ let isValid = JSONHelper.validate("{\"numbers\": [1,2,3]}")
 ```swift
 let jsonString = try JSONHelper.string(from: ["foo": 42])
 let jsonData   = try JSONHelper.data(from: [42, 64, 10175])
-let isValid    = JSONHelper.validate(["invalid": Date()])
+let isValid    = JSONHelper.isValid(["invalid": Date()])
+try JSONHelper.validate([1, true, NSNull()])
 ```
 
 ## API

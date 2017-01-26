@@ -54,10 +54,10 @@ class JSONArrayTests: XCTestCase {
   
   
   func testInvaidJSONArray() {
-    let shouldThrow = expectation(description: "does not parse")
+    let shouldThrow = expectation(description: "invalid json array")
     do {
       let _ = try JSONHelper.string(from: [Date(), Date()])
-    } catch JSONError.malformed {
+    } catch JSONError.invalid {
       shouldThrow.fulfill()
     } catch {}
     waitForExpectations(timeout: 1.0, handler: nil)
@@ -70,12 +70,39 @@ class JSONArrayTests: XCTestCase {
   }
   
   
-  func testValidate() {
+  func testIsValid() {
     XCTAssert(JSONHelper.isValid("[1,2]"))
     XCTAssert(JSONHelper.isValid("[\"one\", \"two\"]"))
     XCTAssert(JSONHelper.isValid(["foo", 42, false, NSNull()]))
     XCTAssertFalse(JSONHelper.isValid(""))
     XCTAssertFalse(JSONHelper.isValid("foobar"))
     XCTAssertFalse(JSONHelper.isValid([Date()]))
+  }
+  
+  
+  func testValidate() {
+    _ = try! JSONHelper.validate("[1,2]")
+    _ = try! JSONHelper.validate("[\"one\", \"two\"]")
+    _ = try! JSONHelper.validate("[true, false]")
+    _ = try! JSONHelper.validate("[null]")
+    _ = try! JSONHelper.validate(["foo", 42, false, NSNull()])
+    
+    let shouldRejectEmptyString = expectation(description: "empty string")
+    let shouldRejectString = expectation(description: "string")
+    let shouldRejectElement = expectation(description: "bad element")
+    
+    do { try JSONHelper.validate("") } catch JSONError.malformed {
+      shouldRejectEmptyString.fulfill()
+    } catch { }
+
+    do { try JSONHelper.validate("foobar") } catch JSONError.malformed {
+      shouldRejectString.fulfill()
+    } catch { }
+    
+    do { try JSONHelper.validate([Date()]) } catch JSONError.invalid {
+      shouldRejectElement.fulfill()
+    } catch { }
+    
+    waitForExpectations(timeout: 1.0, handler: nil)
   }
 }
