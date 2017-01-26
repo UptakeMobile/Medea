@@ -77,24 +77,26 @@
 <li><p>Provides easy validation functions for verifying <code>Data</code>s, <code>String</code>s, <code>JSONObject</code>s or <code>JSONArray</code>s represent well-formed JSON — without having to chain a bunch of conversions and <code>try</code>.</p></li>
 </ul>
 <a href='#usage' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='usage'>Usage</h2>
-<a href='#from-json' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='from-json'>From JSON</h3>
-<pre class="highlight plaintext"><code>let object  = try JSONHelper.jsonObject(from: "{\"foo\": 42}")
-let array   = try JSONHelper.jsonArray(from: "[42, 64, 10175]")
-let isValid = JSONHelper.validate("{\"numbers\": [1,2,3]}")
+<a href='#from-json' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='from-json'>From JSON:</h3>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">object</span>  <span class="o">=</span> <span class="k">try</span> <span class="kt">JSONHelper</span><span class="o">.</span><span class="nf">jsonObject</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="s">"{</span><span class="se">\"</span><span class="s">foo</span><span class="se">\"</span><span class="s">: 42}"</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">array</span>   <span class="o">=</span> <span class="k">try</span> <span class="kt">JSONHelper</span><span class="o">.</span><span class="nf">jsonArray</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="s">"[42, 64, 10175]"</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">isValid</span> <span class="o">=</span> <span class="kt">JSONHelper</span><span class="o">.</span><span class="nf">isValid</span><span class="p">(</span><span class="s">"{</span><span class="se">\"</span><span class="s">numbers</span><span class="se">\"</span><span class="s">: [1,2,3]}"</span><span class="p">)</span>
+<span class="k">try</span> <span class="kt">JSONHelper</span><span class="o">.</span><span class="nf">validate</span><span class="p">(</span><span class="s">"[1,true,null]"</span><span class="p">)</span>
 </code></pre>
-<a href='#to-json' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='to-json'>To JSON</h3>
-<pre class="highlight plaintext"><code>let jsonString = try JSONHelper.string(from: ["foo": 42])
-let jsonData   = try JSONHelper.data(from: [42, 64, 10175])
-let isValid    = JSONHelper.validate(["invalid": Date()])
+<a href='#to-json' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='to-json'>To JSON:</h3>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">jsonString</span> <span class="o">=</span> <span class="k">try</span> <span class="kt">JSONHelper</span><span class="o">.</span><span class="nf">string</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="p">[</span><span class="s">"foo"</span><span class="p">:</span> <span class="mi">42</span><span class="p">])</span>
+<span class="k">let</span> <span class="nv">jsonData</span>   <span class="o">=</span> <span class="k">try</span> <span class="kt">JSONHelper</span><span class="o">.</span><span class="nf">data</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="p">[</span><span class="mi">42</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">10175</span><span class="p">])</span>
+<span class="k">let</span> <span class="nv">isValid</span>    <span class="o">=</span> <span class="kt">JSONHelper</span><span class="o">.</span><span class="nf">isValid</span><span class="p">([</span><span class="s">"invalid"</span><span class="p">:</span> <span class="kt">Date</span><span class="p">()])</span>
+<span class="k">try</span> <span class="kt">JSONHelper</span><span class="o">.</span><span class="nf">validate</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="kc">true</span><span class="p">,</span> <span class="kt">NSNull</span><span class="p">()])</span>
 </code></pre>
 <a href='#api' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='api'>API</h2>
 
-<p>Full API documentation <a href="https://jemmons.github.io/Medea/">can be found here</a>.</p>
+<p>Full API documentation <a href="https://jemmons.github.io/Medea/Enums/JSONHelper.html">can be found here</a>.</p>
 
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2017 <a class="link" href="https://figure.ink" target="_blank" rel="external">Joshua Emmons</a>. All rights reserved. (Last updated: 2017-01-21)</p>
+          <p>&copy; 2017 <a class="link" href="https://figure.ink" target="_blank" rel="external">Joshua Emmons</a>. All rights reserved. (Last updated: 2017-01-25)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
