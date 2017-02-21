@@ -12,6 +12,7 @@
 		7382E6B11E20302200021C9C /* JSONArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7382E6AF1E20301F00021C9C /* JSONArrayTests.swift */; };
 		7393BA681E145CC600485518 /* JSONHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7393BA671E145CC600485518 /* JSONHelper.swift */; };
 		7393BA6A1E14615600485518 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7393BA691E14615600485518 /* Types.swift */; };
+		73BAF2481E5CAA0000DBE45A /* .jazzy.yaml in Resources */ = {isa = PBXBuildFile; fileRef = 73BAF2471E5CAA0000DBE45A /* .jazzy.yaml */; };
 		73EE52661E3D2E97008E3300 /* JSONHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7393BA671E145CC600485518 /* JSONHelper.swift */; };
 		73EE52671E3D2E9A008E3300 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7393BA691E14615600485518 /* Types.swift */; };
 		73EE52681E3D2E9D008E3300 /* JSONObjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7322E46A1E145906003A6410 /* JSONObjectTests.swift */; };
@@ -43,6 +44,7 @@
 		7382E6AF1E20301F00021C9C /* JSONArrayTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONArrayTests.swift; sourceTree = "<group>"; };
 		7393BA671E145CC600485518 /* JSONHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONHelper.swift; sourceTree = "<group>"; };
 		7393BA691E14615600485518 /* Types.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
+		73BAF2471E5CAA0000DBE45A /* .jazzy.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = .jazzy.yaml; path = ../.jazzy.yaml; sourceTree = "<group>"; };
 		73EE52291E3D296E008E3300 /* Medea.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Medea.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73EE52351E3D29E7008E3300 /* MedeaTests_macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MedeaTests_macOS.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -84,6 +86,7 @@
 		7322E4521E145905003A6410 = {
 			isa = PBXGroup;
 			children = (
+				73BAF2471E5CAA0000DBE45A /* .jazzy.yaml */,
 				7322E45E1E145905003A6410 /* Medea */,
 				7322E4691E145906003A6410 /* MedeaTests */,
 				7322E45D1E145905003A6410 /* Products */,
@@ -271,6 +274,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73BAF2481E5CAA0000DBE45A /* .jazzy.yaml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -631,6 +635,7 @@
 				73EE522F1E3D296E008E3300 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		73EE523D1E3D29E7008E3300 /* Build configuration list for PBXNativeTarget "MedeaTests_macOS" */ = {
 			isa = XCConfigurationList;
@@ -639,6 +644,7 @@
 				73EE523F1E3D29E7008E3300 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
