@@ -1,5 +1,5 @@
-/// Simple type alias for `[AnyHashable: Any]`, which is `JSONSerialization`'s representation of a JSON object.
-public typealias JSONObject = [AnyHashable: Any]
+/// Simple type alias for `[String: Any]`, which is the closest Swift type to `JSONSerialization`'s representation of a JSON object.
+public typealias JSONObject = [String: Any]
 
 
 

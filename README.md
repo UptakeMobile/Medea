@@ -1,6 +1,7 @@
 # Medea
 
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![API docs](https://jemmons.github.io/Medea/Enums/JSONHelper.html)](https://jemmons.github.io/Medea/badge.svg)
 
 A bag of functions (living in `JSONHelper`) for converting to and from JSON representations. It's a *very* thin wrapper around `JSONSerialization` that also:
  
@@ -10,7 +11,7 @@ A bag of functions (living in `JSONHelper`) for converting to and from JSON repr
 
  * Converts some common `JSONSerialization` errors out of the `NSCocoaErrorDomain` and into the easier-to-catch `JSONError` enum.
 
- * Provides convenience types for `JSONObject` and `JSONArray` to save you from having to type `AnyHashable` or make sense of the oblique `[Any]`.
+ * Provides convenience types for `JSONObject` and `JSONArray` to save you from having to make sense of oblique `Any`s.
 
  * Provides easy validation functions for verifying `Data`s, `String`s, `JSONObject`s or `JSONArray`s represent well-formed JSON — without having to chain a bunch of conversions and `try`.
 
