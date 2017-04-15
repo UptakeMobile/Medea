@@ -54,14 +54,7 @@ class JSONObjectTests: XCTestCase {
   
   
   func testInvaidJSONObject() {
-    let shouldRejectKey = expectation(description: "invalid JSON key")
     let shouldRejectValue = expectation(description: "invalid JSON value")
-
-    do {
-      let _ = try JSONHelper.string(from: [42: "foo"])
-    } catch JSONError.invalid {
-      shouldRejectKey.fulfill()
-    } catch {}
 
     do {
       let _ = try JSONHelper.string(from: ["date": Date()])
@@ -85,7 +78,6 @@ class JSONObjectTests: XCTestCase {
     XCTAssertFalse(JSONHelper.isValid("{1:2}"))
     XCTAssertFalse(JSONHelper.isValid(""))
     XCTAssertFalse(JSONHelper.isValid("foobar"))
-    XCTAssertFalse(JSONHelper.isValid([42: "non-numeric key"]))
     XCTAssertFalse(JSONHelper.isValid(["non-representable": Date()]))
   }
   
@@ -98,7 +90,6 @@ class JSONObjectTests: XCTestCase {
     let shouldRejectStringKey = expectation(description: "string with bad key")
     let shouldRejectEmptyString = expectation(description: "empty string")
     let shouldRejectString = expectation(description: "string")
-    let shouldRejectKey = expectation(description: "bad key")
     let shouldRejectValue = expectation(description: "bad value")
     
     do { try JSONHelper.validate("{1:2}") } catch JSONError.malformed {
@@ -111,10 +102,6 @@ class JSONObjectTests: XCTestCase {
     
     do { try JSONHelper.validate("foobar") } catch JSONError.malformed {
       shouldRejectString.fulfill()
-    } catch { }
-
-    do { try JSONHelper.validate([42: "non-numeric key"]) } catch JSONError.invalid {
-      shouldRejectKey.fulfill()
     } catch { }
 
     do { try JSONHelper.validate(["non-representable": Date()]) } catch JSONError.invalid {
