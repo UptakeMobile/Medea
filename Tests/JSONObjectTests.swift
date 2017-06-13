@@ -12,7 +12,7 @@ class JSONObjectTests: XCTestCase {
     let shouldThrow = expectation(description: "throws notJSONObject error")
     do {
       let _ = try JSONHelper.jsonObject(from: "[1,2,3]")
-    } catch JSONError.nonObject {
+    } catch JSONError.unexpectedType {
       shouldThrow.fulfill()
     } catch {}
     waitForExpectations(timeout: 0.1, handler: nil)

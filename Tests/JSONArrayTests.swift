@@ -12,7 +12,7 @@ class JSONArrayTests: XCTestCase {
     let shouldThrow = expectation(description: "throws notJSONArray error")
     do {
       let _ = try JSONHelper.jsonArray(from: "{\"foo\": \"bar\"}")
-    } catch JSONError.nonArray {
+    } catch JSONError.unexpectedType {
       shouldThrow.fulfill()
     } catch {}
     waitForExpectations(timeout: 1.0, handler: nil)
