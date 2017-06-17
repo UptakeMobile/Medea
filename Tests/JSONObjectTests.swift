@@ -58,7 +58,7 @@ class JSONObjectTests: XCTestCase {
 
     do {
       let _ = try JSONHelper.string(from: ["date": Date()])
-    } catch JSONError.invalid {
+    } catch JSONError.invalidType {
       shouldRejectValue.fulfill()
     } catch {}
     waitForExpectations(timeout: 0.1, handler: nil)
@@ -104,7 +104,7 @@ class JSONObjectTests: XCTestCase {
       shouldRejectString.fulfill()
     } catch { }
 
-    do { try JSONHelper.validate(["non-representable": Date()]) } catch JSONError.invalid {
+    do { try JSONHelper.validate(["non-representable": Date()]) } catch JSONError.invalidType {
       shouldRejectValue.fulfill()
     } catch { }
     

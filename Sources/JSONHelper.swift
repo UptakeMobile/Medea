@@ -50,11 +50,9 @@ public enum JSONHelper {
   
   
   public static func anyJSON(from data: Data) throws -> AnyJSON {
-    //bare values are allowed in JSON (RFC 7159), but JSONSerialization chokes on this. As a work-around, we wrap everything in an array literal to parse, then return the first element of it.
-    let wrappedData = try Helper.wrapInLiteralArray(data)
-    let array: JSONArray?
     do {
-      array = try JSONSerialization.jsonObject(with: wrappedData, options: []) as? JSONArray
+      return try AnyJSON(JSONSerialization.jsonObject(with: data, options: .allowFragments))
+      
     } catch let e as NSError {
       switch (e.domain, e.code) {
       case (NSCocoaErrorDomain, 3840):
@@ -63,10 +61,6 @@ public enum JSONHelper {
         throw e
       }
     }
-    guard let value = array?.first else {
-      throw JSONError.malformed
-    }
-    return try AnyJSON(value)
   }
   
   
@@ -275,12 +269,6 @@ public enum JSONHelper {
 
 
 private enum Helper  {
-  static func wrapInLiteralArray(_ someData: Data) throws -> Data {
-    let wrappedString = try "[" + string(from: someData) + "]"
-    return data(from: wrappedString)
-  }
-  
-  
   static func string(from data: Data) throws -> String {
     guard let string = String(data: data, encoding: .utf8) else {
       throw StringError.encoding
