@@ -12,7 +12,7 @@ class JSONArrayTests: XCTestCase {
     let shouldThrow = expectation(description: "throws notJSONArray error")
     do {
       let _ = try JSONHelper.jsonArray(from: "{\"foo\": \"bar\"}")
-    } catch JSONError.nonArray {
+    } catch JSONError.unexpectedType {
       shouldThrow.fulfill()
     } catch {}
     waitForExpectations(timeout: 1.0, handler: nil)
@@ -57,7 +57,7 @@ class JSONArrayTests: XCTestCase {
     let shouldThrow = expectation(description: "invalid json array")
     do {
       let _ = try JSONHelper.string(from: [Date(), Date()])
-    } catch JSONError.invalid {
+    } catch JSONError.invalidType {
       shouldThrow.fulfill()
     } catch {}
     waitForExpectations(timeout: 1.0, handler: nil)
@@ -99,7 +99,7 @@ class JSONArrayTests: XCTestCase {
       shouldRejectString.fulfill()
     } catch { }
     
-    do { try JSONHelper.validate([Date()]) } catch JSONError.invalid {
+    do { try JSONHelper.validate([Date()]) } catch JSONError.invalidType {
       shouldRejectElement.fulfill()
     } catch { }
     

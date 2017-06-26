@@ -9,11 +9,11 @@ public enum JSONHelper {
    Decodes `Data` representation of a JSON object into a `JSONObject`.
    
    * parameter data: The bytes of a string representing a JSON object, encoded as UTF-8.
-   * throws: Standard `Error` if `data` is unreadable or not UTF-8. `JSONError.malformed` if `data` does not represent JSON and `JSONError.nonObject` if `data` represents a JSON array.
+   * throws: Standard `Error` if `data` is unreadable or not UTF-8. `JSONError.malformed` if `data` does not represent JSON and `JSONError.unexpectedType` if `data` represents something other than a JSON object.
    * returns: A `JSONObject` representation of `data`.
    */
   public static func jsonObject(from data: Data) throws -> JSONObject {
-    return try jsonObjectFromAny(anyJSON(from: data))
+    return try anyJSON(from: data).objectValue()
   }
   
   
@@ -21,11 +21,46 @@ public enum JSONHelper {
    Decodes `Data` representation of a JSON array into a `JSONAbject`.
    
    * parameter data: The bytes of a string representing a JSON array, encoded as UTF-8.
-   * throws: Standard `Error` if `data` is unreadable or not UTF-8. `JSONError.malformed` if `data` cannot be parsed as JSON and `JSONError.nonArray` if `data` represents a JSON object.
+   * throws: Standard `Error` if `data` is unreadable or not UTF-8. `JSONError.malformed` if `data` cannot be parsed as JSON and `JSONError.unexpectedType` if `data` represents something other than a JSON array.
    * returns: A `JSONObject` representation of `data`.
    */
   public static func jsonArray(from data: Data) throws -> JSONArray {
-    return try jsonArrayFromAny(anyJSON(from: data))
+    return try anyJSON(from: data).arrayValue()
+  }
+  
+  
+  public static func jsonString(from data: Data) throws -> String {
+    return try anyJSON(from: data).stringValue()
+  }
+  
+  
+  public static func jsonNumber(from data: Data) throws -> NSNumber {
+    return try anyJSON(from: data).numberValue()
+  }
+  
+  
+  public static func jsonBool(from data: Data) throws -> Bool {
+    return try anyJSON(from: data).boolValue()
+  }
+  
+  
+  public static func jsonIsNull(from data: Data) throws -> Bool {
+    return try anyJSON(from: data).isNull
+  }
+  
+  
+  public static func anyJSON(from data: Data) throws -> AnyJSON {
+    do {
+      return try AnyJSON(JSONSerialization.jsonObject(with: data, options: .allowFragments))
+      
+    } catch let e as NSError {
+      switch (e.domain, e.code) {
+      case (NSCocoaErrorDomain, 3840):
+        throw JSONError.malformed
+      default:
+        throw e
+      }
+    }
   }
   
   
@@ -34,11 +69,11 @@ public enum JSONHelper {
    Parses `String` representation of a JSON object into a `JSONObject`.
    
    * parameter string: A string representing a JSON object.
-   * throws: `JSONError.malformed` if `string` cannot be parsed as JSON and `JSONError.nonObject` if `string` represents a JSON array.
+   * throws: `JSONError.malformed` if `string` cannot be parsed as JSON and `JSONError.unexpectedType` if `string` represents something other than a JSON object.
    * returns: A `JSONObject` representation of `string`.
    */
   public static func jsonObject(from string: String) throws -> JSONObject {
-    return try  jsonObjectFromAny(anyJSON(from: data(from: string)))
+    return try anyJSON(from: Helper.data(from: string)).objectValue()
   }
   
   
@@ -46,13 +81,38 @@ public enum JSONHelper {
    Parses `String` representation of a JSON array into a `JSONArray`.
    
    * parameter string: A string representing a JSON object.
-   * throws: `JSONError.malformed` if `string` cannot be parsed as JSON and `JSONError.nonObject` if `string` represents a JSON object.
+   * throws: `JSONError.malformed` if `string` cannot be parsed as JSON and `JSONError.unexpectedType` if `string` represents something other than a JSON array.
    * returns: A `JSONObject` representation of `string`.
    */
   public static func jsonArray(from string: String) throws -> JSONArray {
-    return try jsonArrayFromAny(anyJSON(from: data(from: string)))
+    return try anyJSON(from: Helper.data(from: string)).arrayValue()
   }
   
+  
+  public static func jsonString(from string: String) throws -> String {
+    return try anyJSON(from: Helper.data(from: string)).stringValue()
+  }
+  
+  
+  public static func jsonNumber(from string: String) throws -> NSNumber {
+    return try anyJSON(from: Helper.data(from: string)).numberValue()
+  }
+  
+  
+  public static func jsonBool(from string: String) throws -> Bool {
+    return try anyJSON(from: Helper.data(from: string)).boolValue()
+  }
+  
+  
+  public static func jsonIsNull(from string: String) throws -> Bool {
+    return try anyJSON(from: Helper.data(from: string)).isNull
+  }
+  
+  
+  public static func anyJSON(from string: String) throws -> AnyJSON {
+    return try anyJSON(from: Helper.data(from: string))
+  }
+    
   
   //MARK: - Data from JSON
   /**
@@ -63,7 +123,7 @@ public enum JSONHelper {
    * returns: The bytes of a string representing a JSON object, encoded as UTF-8.
    */
   public static func data(from jsonObject: JSONObject) throws -> Data {
-    return try dataFromAny(jsonObject)
+    return try Helper.dataFromAny(jsonObject)
   }
   
   
@@ -75,7 +135,7 @@ public enum JSONHelper {
    * returns: The bytes of a string representing a JSON array, encoded as UTF-8.
    */
   public static func data(from jsonArray: JSONArray) throws -> Data {
-    return try dataFromAny(jsonArray)
+    return try Helper.dataFromAny(jsonArray)
   }
   
   
@@ -88,7 +148,7 @@ public enum JSONHelper {
    * returns: A string representing a JSON object, encoded as UTF-8.
    */
   public static func string(from json: JSONObject) throws -> String {
-    return try string(from: data(from: json))
+    return try Helper.string(from: data(from: json))
   }
   
   
@@ -100,33 +160,32 @@ public enum JSONHelper {
    * returns: A string representing a JSON array, encoded as UTF-8.
    */
   public static func string(from json: JSONArray) throws -> String {
-    return try string(from: data(from: json))
+    return try Helper.string(from: data(from: json))
   }
   
   
   //MARK: - Validation
   /**
-   Validates whether the given `String` is well-formed JSON.
+   Validates whether the given `String` is valid JSON text.
    
-   * parameter string: The string to validate.
+   * note: While this could be used to (redundantly?) validate a string-type JSON value, it is more usefully applied to JSON serialized as a string.
+   
+   * parameter string: The JSON text to validate.
    * returns: `true` if the string represents valid JSON. Otherwise: `false`.
    */
-  public static func isValid(_ string: String) -> Bool {
-    return isValid(data(from: string))
+  public static func isValid(_ jsonText: String) -> Bool {
+    return isValid(Helper.data(from: jsonText))
   }
-
+  
   
   /**
-   Validates whether the given bytes represent well-formed JSON string.
+   Validates whether the given bytes represent well-formed JSON text.
    
    * parameter data: The bytes to validate.
    * returns: `true` if `data` represents the bytes of a UTF-8 encoded string, and said string depicts valid JSON. Otherwise: `false`.
    */
   public static func isValid(_ data: Data) -> Bool {
-    if let _ = try? jsonObject(from: data) {
-      return true
-    }
-    if let _ = try? jsonArray(from: data) {
+    if let _ = try? anyJSON(from: data) {
       return true
     }
     return false
@@ -140,7 +199,7 @@ public enum JSONHelper {
    * returns: `true` if `jsonObject` contains only types representable in JSON. Otherwise: `false`.
    */
   public static func isValid(_ jsonObject: JSONObject) -> Bool {
-    if let _ = try? dataFromAny(jsonObject) {
+    if let _ = try? Helper.dataFromAny(jsonObject) {
       return true
     }
     return false
@@ -154,7 +213,7 @@ public enum JSONHelper {
    * returns: `true` if `jsonArray` contains only types representable in JSON. Otherwise: `false`.
    */
   public static func isValid(_ jsonArray: JSONArray) -> Bool {
-    if let _ = try? dataFromAny(jsonArray) {
+    if let _ = try? Helper.dataFromAny(jsonArray) {
       return true
     }
     return false
@@ -162,28 +221,26 @@ public enum JSONHelper {
   
   
   /**
-   Validates whether the given `String` is well-formed JSON, throwing if it's not.
+   Validates whether the given `String` is well-formed JSON text, throwing if it's not.
+   
+   * note: While this could be used to (redundantly?) validate a string-type JSON value, it is more usefully applied to JSON serialized as a string.
    
    * parameter string: The string to validate.
    * throws: `JSONError.malformed` if `string` cannot be parsed as JSON.
    */
   public static func validate(_ string: String) throws {
-    try validate(data(from: string))
+    try validate(Helper.data(from: string))
   }
   
   
   /**
-   Validates whether the given bytes represent well-formed JSON string, throwing if they do not.
+   Validates whether the given bytes represent well-formed JSON text, throwing if they do not.
    
    * parameter data: The bytes to validate.
    * throws: Standard `Error` if `data` is unreadable or not UTF-8. `JSONError.malformed` if `data` cannot be parsed as JSON.
    */
   public static func validate(_ data: Data) throws {
-    do {
-      _ = try jsonObject(from: data)
-    } catch Medea.JSONError.nonObject {
-      _ = try jsonArray(from: data)
-    }
+    _ = try anyJSON(from: data)
   }
   
   
@@ -194,7 +251,7 @@ public enum JSONHelper {
    * throws: `JSONError.invalid` if `JSONObject` isn't a valid JSON object.
    */
   public static func validate(_ jsonObject: JSONObject) throws {
-    _ = try dataFromAny(jsonObject)
+    _ = try Helper.dataFromAny(jsonObject)
   }
   
   
@@ -205,26 +262,14 @@ public enum JSONHelper {
    * throws: `JSONError.invalid` if `JSONArray` isn't an array of JSON-safe values.
    */
   public static func validate(_ jsonArray: JSONArray) throws {
-    _ = try dataFromAny(jsonArray)
+    _ = try Helper.dataFromAny(jsonArray)
   }
-  
-  
-  //MARK: - Helpers
-  private static func anyJSON(from data: Data) throws -> Any {
-    do {
-      return try JSONSerialization.jsonObject(with: data, options: [])
-    } catch let e as NSError {
-      switch (e.domain, e.code) {
-      case (NSCocoaErrorDomain, 3840):
-        throw JSONError.malformed
-      default:
-        throw e
-      }
-    }
-  }
-  
-  
-  private static func string(from data: Data) throws -> String {
+}
+
+
+
+private enum Helper  {
+  static func string(from data: Data) throws -> String {
     guard let string = String(data: data, encoding: .utf8) else {
       throw StringError.encoding
     }
@@ -232,33 +277,18 @@ public enum JSONHelper {
   }
   
   
-  private static func data(from string: String) -> Data {
+  static func data(from string: String) -> Data {
     // This cannot be `nil` when `allowLossyConversion` is `true`. So we force-unwrap.
     // Aside: it should be impossible for any `String` to fail even a lossless conversion to UTF-8 (there are currently no characters unrepresentable in UTF-8), but we're being pedantic.
     return string.data(using: .utf8, allowLossyConversion: true)!
   }
   
   
-  private static func dataFromAny(_ any: Any) throws -> Data {
+  static func dataFromAny(_ any: Any) throws -> Data {
     guard JSONSerialization.isValidJSONObject(any) else {
-      throw JSONError.invalid
+      throw JSONError.invalidType
     }
     return try JSONSerialization.data(withJSONObject: any, options: [])
   }
-  
-  
-  private static func jsonObjectFromAny(_ any: Any) throws -> JSONObject {
-    guard let json = any as? JSONObject else {
-      throw JSONError.nonObject
-    }
-    return json
-  }
-  
-  
-  private static func jsonArrayFromAny(_ any: Any) throws -> JSONArray {
-    guard let json = any as? JSONArray else {
-      throw JSONError.nonArray
-    }
-    return json
-  }
 }
+
