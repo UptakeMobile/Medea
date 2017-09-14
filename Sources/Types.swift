@@ -110,3 +110,26 @@ public enum StringError: Error {
   /// Thrown when JSON decodes into a string that is not UTF-8. This should be impossible.
   case encoding
 }
+
+
+
+/// Errors with file handling
+public enum FileError: LocalizedError {
+  /// Unable to find a file wiht the given name.
+  case fileNotFound(String)
+  /// Unable to open or read the given file.
+  case cannotRead(URL)
+  
+  
+  public var errorDescription: String? {
+    switch self {
+    case .fileNotFound(let n):
+      return "The file “\(n)” is not found."
+
+    case .cannotRead(let url):
+      return "Unable to open or read the file at \(url.absoluteString)."
+    }
+  }
+}
+
+

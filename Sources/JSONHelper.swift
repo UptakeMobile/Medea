@@ -18,11 +18,11 @@ public enum JSONHelper {
   
   
   /**
-   Decodes `Data` representation of a JSON array into a `JSONAbject`.
+   Decodes `Data` representation of a JSON array into a `JSONArray`.
    
    * parameter data: The bytes of a string representing a JSON array, encoded as UTF-8.
    * throws: Standard `Error` if `data` is unreadable or not UTF-8. `JSONError.malformed` if `data` cannot be parsed as JSON and `JSONError.unexpectedType` if `data` represents something other than a JSON array.
-   * returns: A `JSONObject` representation of `data`.
+   * returns: A `JSONArray` representation of `data`.
    */
   public static func jsonArray(from data: Data) throws -> JSONArray {
     return try anyJSON(from: data).arrayValue()
@@ -82,7 +82,7 @@ public enum JSONHelper {
    
    * parameter string: A string representing a JSON object.
    * throws: `JSONError.malformed` if `string` cannot be parsed as JSON and `JSONError.unexpectedType` if `string` represents something other than a JSON array.
-   * returns: A `JSONObject` representation of `string`.
+   * returns: A `JSONArray` representation of `string`.
    */
   public static func jsonArray(from string: String) throws -> JSONArray {
     return try anyJSON(from: Helper.data(from: string)).arrayValue()
@@ -112,7 +112,60 @@ public enum JSONHelper {
   public static func anyJSON(from string: String) throws -> AnyJSON {
     return try anyJSON(from: Helper.data(from: string))
   }
-    
+  
+  
+  //MARK: - JSON from file
+  /**
+   Decodes contents of UTF-8 file into a `JSONObject`.
+   
+   * parameter name: Name of the file in the given `bundle` to decode.
+   * parameter extension: Extension to use with `name`. Defaults to "json".
+   * parameter bundle: Bundle to search for file named `name`. Defaults to `Bundle.main`.
+   * throws: `FileError` if file is not found or unreadable. `JSONError` if file cannot be parsed as a JSON object.
+   * returns: A `JSONObject` representation of data in file.
+   */
+  public static func jsonObject(fromFileNamed name: String, extension: String = "json", bundle: Bundle = Bundle.main) throws -> JSONObject {
+    return try anyJSON(fromFileNamed: name, extension: `extension`, bundle: bundle).objectValue()
+  }
+
+  
+  /**
+   Decodes contents of UTF-8 file into a into a `JSONArray`.
+   
+   * parameter name: Name of the file in the given `bundle` to decode.
+   * parameter extension: Extension to use with `name`. Defaults to "json".
+   * parameter bundle: Bundle to search for file named `name`. Defaults to `Bundle.main`.
+   * throws: `FileError` if file is not found or unreadable. `JSONError` if file cannot be parsed as a JSON array.
+   * returns: A `JSONArray` representation of data in file.
+   */
+  public static func jsonArray(fromFileNamed name: String, extension: String = "json", bundle: Bundle = Bundle.main) throws -> JSONArray {
+    return try anyJSON(fromFileNamed: name, extension: `extension`, bundle: bundle).arrayValue()
+  }
+
+  
+  /**
+   Decodes contents of UTF-8 as JSON.
+   
+   * note: While this will parse files a file as a string, a numbers or even just `null`, there are probably more efficient ways of doing this than going through a JSON deserializer.
+   
+   * seealso: `jsonObject(fromFileNamed:extension:bundle)` and `jsonArray(fromFileNamed:extension:bundle)`
+   
+   * parameter name: Name of the file in the given `bundle` to decode.
+   * parameter extension: Extension to use with `name`. Defaults to "json".
+   * parameter bundle: Bundle to search for file named `name`. Defaults to `Bundle.main`.
+   * throws: `FileError` if file is not found or unreadable. `JSONError` if file cannot be parsed as JSON.
+   * returns: An `AnyJSON` representation of data in file.
+   */
+  public static func anyJSON(fromFileNamed name: String, extension: String = "json", bundle: Bundle = Bundle.main) throws -> AnyJSON {
+    guard let url = bundle.url(forResource: name, withExtension: `extension`) else {
+      throw FileError.fileNotFound(name + "." + `extension`)
+    }
+    guard let data = try? Data(contentsOf: url) else {
+      throw FileError.cannotRead(url)
+    }
+    return try anyJSON(from: data)
+  }
+  
   
   //MARK: - Data from JSON
   /**
