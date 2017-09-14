@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>JSONError Enum Reference</title>
+    <title>FileError Enum Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Enum/JSONError" class="dashAnchor"></a>
-    <a title="JSONError Enum Reference"></a>
+    <a name="//apple_ref/swift/Enum/FileError" class="dashAnchor"></a>
+    <a title="FileError Enum Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html">Medea Docs</a> (55% documented)</p>
@@ -23,7 +23,7 @@
       <p id="breadcrumbs">
         <a href="../index.html">Medea Reference</a>
         <img id="carat" src="../img/carat.png" />
-        JSONError Enum Reference
+        FileError Enum Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -70,14 +70,14 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>JSONError</h1>
+            <h1>FileError</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">JSONError</span><span class="p">:</span> <span class="kt">Error</span></code></pre>
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">FileError</span><span class="p">:</span> <span class="kt">LocalizedError</span></code></pre>
 
                 </div>
               </div>
-            <p>Errors thrown when parsing JSON.</p>
+            <p>Errors with file handling</p>
 
           </section>
           <section class="section task-group-section">
@@ -86,9 +86,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Medea9JSONErrorO14unexpectedTypeA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/unexpectedType" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Medea9JSONErrorO14unexpectedTypeA2CmF">unexpectedType</a>
+                    <a name="/s:5Medea9FileErrorO12fileNotFoundACSScACmF"></a>
+                    <a name="//apple_ref/swift/Element/fileNotFound" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Medea9FileErrorO12fileNotFoundACSScACmF">fileNotFound</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -96,14 +96,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Thrown when expecting to convert to or from a given JSON type (Object, Array, String, etc) but a different type is encountered instead.</p>
+                        <p>Unable to find a file wiht the given name.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="n">unexpectedType</span></code></pre>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="nf">fileNotFound</span><span class="p">(</span><span class="kt">String</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -117,9 +117,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Medea9JSONErrorO9malformedA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/malformed" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Medea9JSONErrorO9malformedA2CmF">malformed</a>
+                    <a name="/s:5Medea9FileErrorO10cannotReadAC10Foundation3URLVcACmF"></a>
+                    <a name="//apple_ref/swift/Element/cannotRead" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Medea9FileErrorO10cannotReadAC10Foundation3URLVcACmF">cannotRead</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -127,14 +127,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Thrown when a string representation cannot be parsed as JSON.</p>
+                        <p>Unable to open or read the given file.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="n">malformed</span></code></pre>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="nf">cannotRead</span><span class="p">(</span><span class="kt">URL</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -148,9 +148,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Medea9JSONErrorO11invalidTypeA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/invalidType" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Medea9JSONErrorO11invalidTypeA2CmF">invalidType</a>
+                    <a name="/s:10Foundation14LocalizedErrorP16errorDescriptionSSSgv"></a>
+                    <a name="//apple_ref/swift/Property/errorDescription" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10Foundation14LocalizedErrorP16errorDescriptionSSSgv">errorDescription</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -158,14 +158,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Thrown when a <code><a href="../Other Typealiases.html#/s:5Medea9JSONArraya">JSONArray</a></code> or <code><a href="../Other Typealiases.html#/s:5Medea10JSONObjecta">JSONObject</a></code> contains types that are illegal in JSON.</p>
+                        <p>Unable to open or read the given file.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="n">invalidType</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">errorDescription</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>

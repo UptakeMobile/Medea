@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		732067651F69ECCF00344E6F /* JSONFromFileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 732067631F69ECC400344E6F /* JSONFromFileTests.swift */; };
+		732067661F69ECD000344E6F /* JSONFromFileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 732067631F69ECC400344E6F /* JSONFromFileTests.swift */; };
+		7320676A1F69ED4300344E6F /* array.json in Resources */ = {isa = PBXBuildFile; fileRef = 732067681F69ED2500344E6F /* array.json */; };
+		7320676B1F69ED4400344E6F /* array.json in Resources */ = {isa = PBXBuildFile; fileRef = 732067681F69ED2500344E6F /* array.json */; };
+		7320676E1F69F77400344E6F /* object.json in Resources */ = {isa = PBXBuildFile; fileRef = 7320676C1F69F5E100344E6F /* object.json */; };
+		7320676F1F69F77500344E6F /* object.json in Resources */ = {isa = PBXBuildFile; fileRef = 7320676C1F69F5E100344E6F /* object.json */; };
+		732067721F69F8D400344E6F /* object.ext in Resources */ = {isa = PBXBuildFile; fileRef = 732067701F69F87500344E6F /* object.ext */; };
+		732067731F69F8D400344E6F /* object.ext in Resources */ = {isa = PBXBuildFile; fileRef = 732067701F69F87500344E6F /* object.ext */; };
 		7322E4661E145906003A6410 /* Medea.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7322E45C1E145905003A6410 /* Medea.framework */; };
 		7322E46B1E145906003A6410 /* JSONObjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7322E46A1E145906003A6410 /* JSONObjectTests.swift */; };
 		7382E6B11E20302200021C9C /* JSONArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7382E6AF1E20301F00021C9C /* JSONArrayTests.swift */; };
@@ -37,6 +45,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		732067631F69ECC400344E6F /* JSONFromFileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONFromFileTests.swift; sourceTree = "<group>"; };
+		732067681F69ED2500344E6F /* array.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = array.json; sourceTree = "<group>"; };
+		7320676C1F69F5E100344E6F /* object.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = object.json; sourceTree = "<group>"; };
+		732067701F69F87500344E6F /* object.ext */ = {isa = PBXFileReference; lastKnownFileType = text; path = object.ext; sourceTree = "<group>"; };
 		7322E45C1E145905003A6410 /* Medea.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Medea.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7322E4651E145906003A6410 /* MedeaTests_iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MedeaTests_iOS.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7322E46A1E145906003A6410 /* JSONObjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONObjectTests.swift; sourceTree = "<group>"; };
@@ -83,6 +95,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		732067671F69ED0200344E6F /* JSON Files */ = {
+			isa = PBXGroup;
+			children = (
+				7320676C1F69F5E100344E6F /* object.json */,
+				732067701F69F87500344E6F /* object.ext */,
+				732067681F69ED2500344E6F /* array.json */,
+			);
+			path = "JSON Files";
+			sourceTree = "<group>";
+		};
 		7322E4521E145905003A6410 = {
 			isa = PBXGroup;
 			children = (
@@ -118,8 +140,10 @@
 		7322E4691E145906003A6410 /* MedeaTests */ = {
 			isa = PBXGroup;
 			children = (
+				732067671F69ED0200344E6F /* JSON Files */,
 				7322E46A1E145906003A6410 /* JSONObjectTests.swift */,
 				7382E6AF1E20301F00021C9C /* JSONArrayTests.swift */,
+				732067631F69ECC400344E6F /* JSONFromFileTests.swift */,
 			);
 			name = MedeaTests;
 			path = ../Tests;
@@ -282,6 +306,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				732067721F69F8D400344E6F /* object.ext in Resources */,
+				7320676E1F69F77400344E6F /* object.json in Resources */,
+				7320676A1F69ED4300344E6F /* array.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +323,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				732067731F69F8D400344E6F /* object.ext in Resources */,
+				7320676F1F69F77500344E6F /* object.json in Resources */,
+				7320676B1F69ED4400344E6F /* array.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,6 +345,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				732067651F69ECCF00344E6F /* JSONFromFileTests.swift in Sources */,
 				7322E46B1E145906003A6410 /* JSONObjectTests.swift in Sources */,
 				7382E6B11E20302200021C9C /* JSONArrayTests.swift in Sources */,
 			);
@@ -333,6 +364,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				732067661F69ECD000344E6F /* JSONFromFileTests.swift in Sources */,
 				73EE52681E3D2E9D008E3300 /* JSONObjectTests.swift in Sources */,
 				73EE52691E3D2EA0008E3300 /* JSONArrayTests.swift in Sources */,
 			);
