@@ -1,6 +1,187 @@
 {
   "warnings": [
-
+    {
+      "file": "/Users/skia/code/mcmxcix/Medea/Sources/JSONHelper.swift",
+      "line": 32,
+      "symbol": "JSONHelper.jsonString(from:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/skia/code/mcmxcix/Medea/Sources/JSONHelper.swift",
+      "line": 37,
+      "symbol": "JSONHelper.jsonNumber(from:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/skia/code/mcmxcix/Medea/Sources/JSONHelper.swift",
+      "line": 42,
+      "symbol": "JSONHelper.jsonBool(from:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/skia/code/mcmxcix/Medea/Sources/JSONHelper.swift",
+      "line": 47,
+      "symbol": "JSONHelper.jsonIsNull(from:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/skia/code/mcmxcix/Medea/Sources/JSONHelper.swift",
+      "line": 52,
+      "symbol": "JSONHelper.anyJSON(from:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/skia/code/mcmxcix/Medea/Sources/JSONHelper.swift",
+      "line": 92,
+      "symbol": "JSONHelper.jsonString(from:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/skia/code/mcmxcix/Medea/Sources/JSONHelper.swift",
+      "line": 97,
+      "symbol": "JSONHelper.jsonNumber(from:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/skia/code/mcmxcix/Medea/Sources/JSONHelper.swift",
+      "line": 102,
+      "symbol": "JSONHelper.jsonBool(from:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/skia/code/mcmxcix/Medea/Sources/JSONHelper.swift",
+      "line": 107,
+      "symbol": "JSONHelper.jsonIsNull(from:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/skia/code/mcmxcix/Medea/Sources/JSONHelper.swift",
+      "line": 112,
+      "symbol": "JSONHelper.anyJSON(from:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/skia/code/mcmxcix/Medea/Sources/Types.swift",
+      "line": null,
+      "symbol": "AnyJSON",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/skia/code/mcmxcix/Medea/Sources/Types.swift",
+      "line": 14,
+      "symbol": "AnyJSON",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/skia/code/mcmxcix/Medea/Sources/Types.swift",
+      "line": 15,
+      "symbol": "AnyJSON.array",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/skia/code/mcmxcix/Medea/Sources/Types.swift",
+      "line": 15,
+      "symbol": "AnyJSON.bool",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/skia/code/mcmxcix/Medea/Sources/Types.swift",
+      "line": 15,
+      "symbol": "AnyJSON.null",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/skia/code/mcmxcix/Medea/Sources/Types.swift",
+      "line": 15,
+      "symbol": "AnyJSON.number",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/skia/code/mcmxcix/Medea/Sources/Types.swift",
+      "line": 15,
+      "symbol": "AnyJSON.object",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/skia/code/mcmxcix/Medea/Sources/Types.swift",
+      "line": 15,
+      "symbol": "AnyJSON.string",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/skia/code/mcmxcix/Medea/Sources/Types.swift",
+      "line": 17,
+      "symbol": "AnyJSON.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/skia/code/mcmxcix/Medea/Sources/Types.swift",
+      "line": 39,
+      "symbol": "AnyJSON.objectValue()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/skia/code/mcmxcix/Medea/Sources/Types.swift",
+      "line": 47,
+      "symbol": "AnyJSON.arrayValue()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/skia/code/mcmxcix/Medea/Sources/Types.swift",
+      "line": 55,
+      "symbol": "AnyJSON.stringValue()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/skia/code/mcmxcix/Medea/Sources/Types.swift",
+      "line": 63,
+      "symbol": "AnyJSON.boolValue()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/skia/code/mcmxcix/Medea/Sources/Types.swift",
+      "line": 71,
+      "symbol": "AnyJSON.numberValue()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/skia/code/mcmxcix/Medea/Sources/Types.swift",
+      "line": 79,
+      "symbol": "AnyJSON.isNull",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/skia/code/mcmxcix/Medea/Sources/Types.swift",
+      "line": 89,
+      "symbol": "AnyJSON.isNotNull",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    }
   ],
   "source_directory": "/Users/skia/code/mcmxcix/Medea"
 }
