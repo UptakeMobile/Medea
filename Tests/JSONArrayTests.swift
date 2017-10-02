@@ -53,6 +53,12 @@ class JSONArrayTests: XCTestCase {
   }
   
   
+  func testValidJSONArray() {
+    let subject = try! ValidJSONArray(["foo", "bar"])
+    let array = JSONHelper.string(from: subject)
+    XCTAssertEqual(array, "[\"foo\",\"bar\"]")
+  }
+  
   func testInvaidJSONArray() {
     let shouldThrow = expectation(description: "invalid json array")
     do {

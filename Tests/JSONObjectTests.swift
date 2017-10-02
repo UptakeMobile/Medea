@@ -51,6 +51,13 @@ class JSONObjectTests: XCTestCase {
     let subject = try! JSONHelper.string(from: ["foo": "bar"])
     XCTAssertEqual(subject, "{\"foo\":\"bar\"}")
   }
+
+  
+  func testValidJSONObject() {
+    let subject = try! ValidJSONObject(["baz": "thud"])
+    let object = JSONHelper.string(from: subject)
+    XCTAssertEqual(object, "{\"baz\":\"thud\"}")
+  }
   
   
   func testInvaidJSONObject() {

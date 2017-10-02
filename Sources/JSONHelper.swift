@@ -172,7 +172,7 @@ public enum JSONHelper {
    Serializes a `JSONObject` into `Data`.
    
    * parameter jsonObject: The JSONObject to serialize.
-   * throws: `JSONError.invalid` if `JSONObject` isn't a valid JSON object.
+   * throws: `JSONError.invalidType` if `JSONObject` isn't a valid JSON object.
    * returns: The bytes of a string representing a JSON object, encoded as UTF-8.
    */
   public static func data(from jsonObject: JSONObject) throws -> Data {
@@ -181,14 +181,36 @@ public enum JSONHelper {
   
   
   /**
+   Serializes a `ValidJSONObject` into `Data`. Because it takes a `ValidJSONObject`, it doesn't throw.
+   
+   * parameter jsonObject: The `ValidJSONObject` to serialize.
+   * returns: The bytes of a string representing a JSON object, encoded as UTF-8.
+   */
+  public static func data(from jsonObject: ValidJSONObject) -> Data {
+    return try! Helper.dataFromAny(jsonObject.value)
+  }
+  
+  
+  /**
    Serializes a `JSONArray` into `Data`.
    
    * parameter jsonArray: The JSONArray to serialize.
-   * throws: `JSONError.invalid` if `JSONArray` isn't an array of JSON-safe values.
+   * throws: `JSONError.invalidType` if `JSONArray` isn't an array of JSON-safe values.
    * returns: The bytes of a string representing a JSON array, encoded as UTF-8.
    */
   public static func data(from jsonArray: JSONArray) throws -> Data {
     return try Helper.dataFromAny(jsonArray)
+  }
+  
+  
+  /**
+   Serializes a `ValidJSONArray` into `Data`. Because it takes a `ValidJSONArray`, it doesn't throw.
+   
+   * parameter jsonArray: The `ValidJSONArray` to serialize.
+   * returns: The bytes of a string representing a JSON array, encoded as UTF-8.
+   */
+  public static func data(from jsonArray: ValidJSONArray)-> Data {
+    return try! Helper.dataFromAny(jsonArray.value)
   }
   
   
@@ -197,7 +219,7 @@ public enum JSONHelper {
    Serializes a `JSONObject` into a `String`.
    
    * parameter jsonObject: The JSONObject to serialize.
-   * throws: `JSONError.invalid` if `JSONObject` isn't a valid JSON object. `StringError.encoding` will be thrown if the serialized JSON can't be represented by a UTF-8 string, but that should be impossible.
+   * throws: `JSONError.invalidType` if `JSONObject` isn't a valid JSON object. `StringError.encoding` will be thrown if the serialized JSON can't be represented by a UTF-8 string, but that should be impossible.
    * returns: A string representing a JSON object, encoded as UTF-8.
    */
   public static func string(from json: JSONObject) throws -> String {
@@ -206,14 +228,36 @@ public enum JSONHelper {
   
   
   /**
+   Serializes a `ValidJSONObject` into a `String`. Because it takes a `ValidJSONObject` it doesn't throw.
+   
+   * parameter jsonObject: The `ValidJSONObject` to serialize.
+   * returns: A string representing a JSON object, encoded as UTF-8.
+   */
+  public static func string(from json: ValidJSONObject) -> String {
+    return try! Helper.string(from: data(from: json))
+  }
+  
+  
+  /**
    Serializes a `JSONArray` into a `String`.
    
    * parameter jsonArray: The JSONArray to serialize.
-   * throws: `JSONError.invalid` if `JSONArray` isn't an array of JSON-safe values. `StringError.encoding` will be thrown if the serialized JSON can't be represented by a UTF-8 string, but that should be impossible.
+   * throws: `JSONError.invalidType` if `JSONArray` isn't an array of JSON-safe values. `StringError.encoding` will be thrown if the serialized JSON can't be represented by a UTF-8 string, but that should be impossible.
    * returns: A string representing a JSON array, encoded as UTF-8.
    */
   public static func string(from json: JSONArray) throws -> String {
     return try Helper.string(from: data(from: json))
+  }
+  
+  
+  /**
+   Serializes a `ValidJSONArray` into a `String`. Because it takes a `ValidJSONArray`, it doesn't throw.
+   
+   * parameter jsonArray: The `ValidJSONArray` to serialize.
+   * returns: A string representing a JSON array, encoded as UTF-8.
+   */
+  public static func string(from json: ValidJSONArray) -> String {
+    return try! Helper.string(from: data(from: json))
   }
   
   
