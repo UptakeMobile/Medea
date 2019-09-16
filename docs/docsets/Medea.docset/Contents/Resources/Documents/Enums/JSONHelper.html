@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>JSONHelper Enum Reference</title>
+    <title>JSONHelper Enumeration Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -11,10 +11,10 @@
   </head>
   <body>
     <a name="//apple_ref/swift/Enum/JSONHelper" class="dashAnchor"></a>
-    <a title="JSONHelper Enum Reference"></a>
+    <a title="JSONHelper Enumeration Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">Medea Docs</a> (55% documented)</p>
+        <p><a href="../index.html">Medea Docs</a> (54% documented)</p>
         <p class="header-right"><a href="https://github.com/jemmons/Medea"><img src="../img/gh.png"/>View on GitHub</a></p>
         <p class="header-right"><a href="dash-feed://https%3A%2F%2Fjemmons%2Egithub%2Eio%2FMedea%2Fdocsets%2FMedea%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
@@ -23,14 +23,14 @@
       <p id="breadcrumbs">
         <a href="../index.html">Medea Reference</a>
         <img id="carat" src="../img/carat.png" />
-        JSONHelper Enum Reference
+        JSONHelper Enumeration Reference
       </p>
     </div>
     <div class="content-wrapper">
       <nav class="sidebar">
         <ul class="nav-groups">
           <li class="nav-group-name">
-            <a href="../Public Interface.html">Public Interface</a>
+            <a href="../Public%20Interface.html">Public Interface</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Enums/JSONHelper.html">JSONHelper</a>
@@ -38,7 +38,7 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Other Enums.html">Other Enums</a>
+            <a href="../Other%20Enums.html">Other Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Enums/AnyJSON.html">AnyJSON</a>
@@ -55,13 +55,24 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Other Typealiases.html">Other Typealiases</a>
+            <a href="../Other%20Structs.html">Other Structures</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Other Typealiases.html#/s:5Medea9JSONArraya">JSONArray</a>
+                <a href="../Structs/ValidJSONArray.html">ValidJSONArray</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Other Typealiases.html#/s:5Medea10JSONObjecta">JSONObject</a>
+                <a href="../Structs/ValidJSONObject.html">ValidJSONObject</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other%20Typealiases.html">Other Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Other%20Typealiases.html#/s:5Medea9JSONArraya">JSONArray</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other%20Typealiases.html#/s:5Medea10JSONObjecta">JSONObject</a>
               </li>
             </ul>
           </li>
@@ -73,7 +84,7 @@
             <h1>JSONHelper</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">JSONHelper</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">JSONHelper</span></code></pre>
 
                 </div>
               </div>
@@ -93,9 +104,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Medea10JSONHelperO10jsonObjects10DictionaryVySSypG10Foundation4DataV4from_tKFZ"></a>
+                    <a name="/s:5Medea10JSONHelperO10jsonObject4fromSDySSypG10Foundation4DataV_tKFZ"></a>
                     <a name="//apple_ref/swift/Method/jsonObject(from:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Medea10JSONHelperO10jsonObjects10DictionaryVySSypG10Foundation4DataV4from_tKFZ">jsonObject(from:)</a>
+                    <a class="token" href="#/s:5Medea10JSONHelperO10jsonObject4fromSDySSypG10Foundation4DataV_tKFZ">jsonObject(from:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -103,11 +114,10 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Decodes <code>Data</code> representation of a JSON object into a <code><a href="../Other Typealiases.html#/s:5Medea10JSONObjecta">JSONObject</a></code>.</p>
-
+                        <p>Decodes <code>Data</code> representation of a JSON object into a <code><a href="../Other%20Typealiases.html#/s:5Medea10JSONObjecta">JSONObject</a></code>.</p>
 <div class="aside aside-throws">
     <p class="aside-title">Throws</p>
-    Standard <code>Error</code> if <code>data</code> is unreadable or not UTF-8. <code><a href="../Enums/JSONError.html#/s:5Medea9JSONErrorO9malformedA2CmF">JSONError.malformed</a></code> if <code>data</code> does not represent JSON and <code><a href="../Enums/JSONError.html#/s:5Medea9JSONErrorO14unexpectedTypeA2CmF">JSONError.unexpectedType</a></code> if <code>data</code> represents something other than a JSON object.
+    Standard <code>Error</code> if <code>data</code> is unreadable or not UTF-8. <code><a href="../Enums/JSONError.html#/s:5Medea9JSONErrorO9malformedyA2CmF">JSONError.malformed</a></code> if <code>data</code> does not represent JSON and <code><a href="../Enums/JSONError.html#/s:5Medea9JSONErrorO14unexpectedTypeyA2CmF">JSONError.unexpectedType</a></code> if <code>data</code> represents something other than a JSON object.
 
 </div>
 
@@ -116,9 +126,32 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">jsonObject</span><span class="p">(</span><span class="n">from</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Other Typealiases.html#/s:5Medea10JSONObjecta">JSONObject</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">jsonObject</span><span class="p">(</span><span class="n">from</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Other%20Typealiases.html#/s:5Medea10JSONObjecta">JSONObject</a></span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>data</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The bytes of a string representing a JSON object, encoded as UTF-8.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code><a href="../Other%20Typealiases.html#/s:5Medea10JSONObjecta">JSONObject</a></code> representation of <code>data</code>.</p>
                       </div>
                     </section>
                   </div>
@@ -126,9 +159,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Medea10JSONHelperO9jsonArraySayypG10Foundation4DataV4from_tKFZ"></a>
+                    <a name="/s:5Medea10JSONHelperO9jsonArray4fromSayypG10Foundation4DataV_tKFZ"></a>
                     <a name="//apple_ref/swift/Method/jsonArray(from:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Medea10JSONHelperO9jsonArraySayypG10Foundation4DataV4from_tKFZ">jsonArray(from:)</a>
+                    <a class="token" href="#/s:5Medea10JSONHelperO9jsonArray4fromSayypG10Foundation4DataV_tKFZ">jsonArray(from:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -136,11 +169,10 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Decodes <code>Data</code> representation of a JSON array into a <code><a href="../Other Typealiases.html#/s:5Medea9JSONArraya">JSONArray</a></code>.</p>
-
+                        <p>Decodes <code>Data</code> representation of a JSON array into a <code><a href="../Other%20Typealiases.html#/s:5Medea9JSONArraya">JSONArray</a></code>.</p>
 <div class="aside aside-throws">
     <p class="aside-title">Throws</p>
-    Standard <code>Error</code> if <code>data</code> is unreadable or not UTF-8. <code><a href="../Enums/JSONError.html#/s:5Medea9JSONErrorO9malformedA2CmF">JSONError.malformed</a></code> if <code>data</code> cannot be parsed as JSON and <code><a href="../Enums/JSONError.html#/s:5Medea9JSONErrorO14unexpectedTypeA2CmF">JSONError.unexpectedType</a></code> if <code>data</code> represents something other than a JSON array.
+    Standard <code>Error</code> if <code>data</code> is unreadable or not UTF-8. <code><a href="../Enums/JSONError.html#/s:5Medea9JSONErrorO9malformedyA2CmF">JSONError.malformed</a></code> if <code>data</code> cannot be parsed as JSON and <code><a href="../Enums/JSONError.html#/s:5Medea9JSONErrorO14unexpectedTypeyA2CmF">JSONError.unexpectedType</a></code> if <code>data</code> represents something other than a JSON array.
 
 </div>
 
@@ -149,9 +181,32 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">jsonArray</span><span class="p">(</span><span class="n">from</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Other Typealiases.html#/s:5Medea9JSONArraya">JSONArray</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">jsonArray</span><span class="p">(</span><span class="n">from</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Other%20Typealiases.html#/s:5Medea9JSONArraya">JSONArray</a></span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>data</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The bytes of a string representing a JSON array, encoded as UTF-8.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code><a href="../Other%20Typealiases.html#/s:5Medea9JSONArraya">JSONArray</a></code> representation of <code>data</code>.</p>
                       </div>
                     </section>
                   </div>
@@ -159,9 +214,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Medea10JSONHelperO10jsonStringSS10Foundation4DataV4from_tKFZ"></a>
+                    <a name="/s:5Medea10JSONHelperO10jsonString4fromSS10Foundation4DataV_tKFZ"></a>
                     <a name="//apple_ref/swift/Method/jsonString(from:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Medea10JSONHelperO10jsonStringSS10Foundation4DataV4from_tKFZ">jsonString(from:)</a>
+                    <a class="token" href="#/s:5Medea10JSONHelperO10jsonString4fromSS10Foundation4DataV_tKFZ">jsonString(from:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -176,7 +231,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">JSONHelper</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">jsonString</span><span class="p">(</span><span class="n">from</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -186,9 +241,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Medea10JSONHelperO10jsonNumberSo8NSNumberC10Foundation4DataV4from_tKFZ"></a>
+                    <a name="/s:5Medea10JSONHelperO10jsonNumber4fromSo8NSNumberC10Foundation4DataV_tKFZ"></a>
                     <a name="//apple_ref/swift/Method/jsonNumber(from:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Medea10JSONHelperO10jsonNumberSo8NSNumberC10Foundation4DataV4from_tKFZ">jsonNumber(from:)</a>
+                    <a class="token" href="#/s:5Medea10JSONHelperO10jsonNumber4fromSo8NSNumberC10Foundation4DataV_tKFZ">jsonNumber(from:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -203,7 +258,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">JSONHelper</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">jsonNumber</span><span class="p">(</span><span class="n">from</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">NSNumber</span></code></pre>
 
                         </div>
                       </div>
@@ -213,9 +268,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Medea10JSONHelperO8jsonBoolSb10Foundation4DataV4from_tKFZ"></a>
+                    <a name="/s:5Medea10JSONHelperO8jsonBool4fromSb10Foundation4DataV_tKFZ"></a>
                     <a name="//apple_ref/swift/Method/jsonBool(from:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Medea10JSONHelperO8jsonBoolSb10Foundation4DataV4from_tKFZ">jsonBool(from:)</a>
+                    <a class="token" href="#/s:5Medea10JSONHelperO8jsonBool4fromSb10Foundation4DataV_tKFZ">jsonBool(from:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -230,7 +285,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">JSONHelper</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">jsonBool</span><span class="p">(</span><span class="n">from</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
                       </div>
@@ -240,9 +295,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Medea10JSONHelperO10jsonIsNullSb10Foundation4DataV4from_tKFZ"></a>
+                    <a name="/s:5Medea10JSONHelperO10jsonIsNull4fromSb10Foundation4DataV_tKFZ"></a>
                     <a name="//apple_ref/swift/Method/jsonIsNull(from:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Medea10JSONHelperO10jsonIsNullSb10Foundation4DataV4from_tKFZ">jsonIsNull(from:)</a>
+                    <a class="token" href="#/s:5Medea10JSONHelperO10jsonIsNull4fromSb10Foundation4DataV_tKFZ">jsonIsNull(from:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -257,7 +312,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">JSONHelper</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">jsonIsNull</span><span class="p">(</span><span class="n">from</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
                       </div>
@@ -267,9 +322,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Medea10JSONHelperO7anyJSONAA03AnyD0O10Foundation4DataV4from_tKFZ"></a>
+                    <a name="/s:5Medea10JSONHelperO7anyJSON4fromAA03AnyD0O10Foundation4DataV_tKFZ"></a>
                     <a name="//apple_ref/swift/Method/anyJSON(from:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Medea10JSONHelperO7anyJSONAA03AnyD0O10Foundation4DataV4from_tKFZ">anyJSON(from:)</a>
+                    <a class="token" href="#/s:5Medea10JSONHelperO7anyJSON4fromAA03AnyD0O10Foundation4DataV_tKFZ">anyJSON(from:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -284,7 +339,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">JSONHelper</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">anyJSON</span><span class="p">(</span><span class="n">from</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Enums/AnyJSON.html">AnyJSON</a></span></code></pre>
 
                         </div>
                       </div>
@@ -305,9 +360,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Medea10JSONHelperO10jsonObjects10DictionaryVySSypGSS4from_tKFZ"></a>
+                    <a name="/s:5Medea10JSONHelperO10jsonObject4fromSDySSypGSS_tKFZ"></a>
                     <a name="//apple_ref/swift/Method/jsonObject(from:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Medea10JSONHelperO10jsonObjects10DictionaryVySSypGSS4from_tKFZ">jsonObject(from:)</a>
+                    <a class="token" href="#/s:5Medea10JSONHelperO10jsonObject4fromSDySSypGSS_tKFZ">jsonObject(from:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -315,11 +370,10 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Parses <code>String</code> representation of a JSON object into a <code><a href="../Other Typealiases.html#/s:5Medea10JSONObjecta">JSONObject</a></code>.</p>
-
+                        <p>Parses <code>String</code> representation of a JSON object into a <code><a href="../Other%20Typealiases.html#/s:5Medea10JSONObjecta">JSONObject</a></code>.</p>
 <div class="aside aside-throws">
     <p class="aside-title">Throws</p>
-    <code><a href="../Enums/JSONError.html#/s:5Medea9JSONErrorO9malformedA2CmF">JSONError.malformed</a></code> if <code>string</code> cannot be parsed as JSON and <code><a href="../Enums/JSONError.html#/s:5Medea9JSONErrorO14unexpectedTypeA2CmF">JSONError.unexpectedType</a></code> if <code>string</code> represents something other than a JSON object.
+    <code><a href="../Enums/JSONError.html#/s:5Medea9JSONErrorO9malformedyA2CmF">JSONError.malformed</a></code> if <code>string</code> cannot be parsed as JSON and <code><a href="../Enums/JSONError.html#/s:5Medea9JSONErrorO14unexpectedTypeyA2CmF">JSONError.unexpectedType</a></code> if <code>string</code> represents something other than a JSON object.
 
 </div>
 
@@ -328,9 +382,32 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">jsonObject</span><span class="p">(</span><span class="n">from</span> <span class="nv">string</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Other Typealiases.html#/s:5Medea10JSONObjecta">JSONObject</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">jsonObject</span><span class="p">(</span><span class="n">from</span> <span class="nv">string</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Other%20Typealiases.html#/s:5Medea10JSONObjecta">JSONObject</a></span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>string</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A string representing a JSON object.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code><a href="../Other%20Typealiases.html#/s:5Medea10JSONObjecta">JSONObject</a></code> representation of <code>string</code>.</p>
                       </div>
                     </section>
                   </div>
@@ -338,9 +415,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Medea10JSONHelperO9jsonArraySayypGSS4from_tKFZ"></a>
+                    <a name="/s:5Medea10JSONHelperO9jsonArray4fromSayypGSS_tKFZ"></a>
                     <a name="//apple_ref/swift/Method/jsonArray(from:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Medea10JSONHelperO9jsonArraySayypGSS4from_tKFZ">jsonArray(from:)</a>
+                    <a class="token" href="#/s:5Medea10JSONHelperO9jsonArray4fromSayypGSS_tKFZ">jsonArray(from:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -348,11 +425,10 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Parses <code>String</code> representation of a JSON array into a <code><a href="../Other Typealiases.html#/s:5Medea9JSONArraya">JSONArray</a></code>.</p>
-
+                        <p>Parses <code>String</code> representation of a JSON array into a <code><a href="../Other%20Typealiases.html#/s:5Medea9JSONArraya">JSONArray</a></code>.</p>
 <div class="aside aside-throws">
     <p class="aside-title">Throws</p>
-    <code><a href="../Enums/JSONError.html#/s:5Medea9JSONErrorO9malformedA2CmF">JSONError.malformed</a></code> if <code>string</code> cannot be parsed as JSON and <code><a href="../Enums/JSONError.html#/s:5Medea9JSONErrorO14unexpectedTypeA2CmF">JSONError.unexpectedType</a></code> if <code>string</code> represents something other than a JSON array.
+    <code><a href="../Enums/JSONError.html#/s:5Medea9JSONErrorO9malformedyA2CmF">JSONError.malformed</a></code> if <code>string</code> cannot be parsed as JSON and <code><a href="../Enums/JSONError.html#/s:5Medea9JSONErrorO14unexpectedTypeyA2CmF">JSONError.unexpectedType</a></code> if <code>string</code> represents something other than a JSON array.
 
 </div>
 
@@ -361,9 +437,32 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">jsonArray</span><span class="p">(</span><span class="n">from</span> <span class="nv">string</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Other Typealiases.html#/s:5Medea9JSONArraya">JSONArray</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">jsonArray</span><span class="p">(</span><span class="n">from</span> <span class="nv">string</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Other%20Typealiases.html#/s:5Medea9JSONArraya">JSONArray</a></span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>string</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A string representing a JSON object.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code><a href="../Other%20Typealiases.html#/s:5Medea9JSONArraya">JSONArray</a></code> representation of <code>string</code>.</p>
                       </div>
                     </section>
                   </div>
@@ -371,9 +470,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Medea10JSONHelperO10jsonStringS2S4from_tKFZ"></a>
+                    <a name="/s:5Medea10JSONHelperO10jsonString4fromS2S_tKFZ"></a>
                     <a name="//apple_ref/swift/Method/jsonString(from:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Medea10JSONHelperO10jsonStringS2S4from_tKFZ">jsonString(from:)</a>
+                    <a class="token" href="#/s:5Medea10JSONHelperO10jsonString4fromS2S_tKFZ">jsonString(from:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -388,7 +487,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">JSONHelper</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">jsonString</span><span class="p">(</span><span class="n">from</span> <span class="nv">string</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -398,9 +497,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Medea10JSONHelperO10jsonNumberSo8NSNumberCSS4from_tKFZ"></a>
+                    <a name="/s:5Medea10JSONHelperO10jsonNumber4fromSo8NSNumberCSS_tKFZ"></a>
                     <a name="//apple_ref/swift/Method/jsonNumber(from:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Medea10JSONHelperO10jsonNumberSo8NSNumberCSS4from_tKFZ">jsonNumber(from:)</a>
+                    <a class="token" href="#/s:5Medea10JSONHelperO10jsonNumber4fromSo8NSNumberCSS_tKFZ">jsonNumber(from:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -415,7 +514,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">JSONHelper</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">jsonNumber</span><span class="p">(</span><span class="n">from</span> <span class="nv">string</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">NSNumber</span></code></pre>
 
                         </div>
                       </div>
@@ -425,9 +524,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Medea10JSONHelperO8jsonBoolSbSS4from_tKFZ"></a>
+                    <a name="/s:5Medea10JSONHelperO8jsonBool4fromSbSS_tKFZ"></a>
                     <a name="//apple_ref/swift/Method/jsonBool(from:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Medea10JSONHelperO8jsonBoolSbSS4from_tKFZ">jsonBool(from:)</a>
+                    <a class="token" href="#/s:5Medea10JSONHelperO8jsonBool4fromSbSS_tKFZ">jsonBool(from:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -442,7 +541,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">JSONHelper</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">jsonBool</span><span class="p">(</span><span class="n">from</span> <span class="nv">string</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
                       </div>
@@ -452,9 +551,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Medea10JSONHelperO10jsonIsNullSbSS4from_tKFZ"></a>
+                    <a name="/s:5Medea10JSONHelperO10jsonIsNull4fromSbSS_tKFZ"></a>
                     <a name="//apple_ref/swift/Method/jsonIsNull(from:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Medea10JSONHelperO10jsonIsNullSbSS4from_tKFZ">jsonIsNull(from:)</a>
+                    <a class="token" href="#/s:5Medea10JSONHelperO10jsonIsNull4fromSbSS_tKFZ">jsonIsNull(from:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -469,7 +568,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">JSONHelper</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">jsonIsNull</span><span class="p">(</span><span class="n">from</span> <span class="nv">string</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
                       </div>
@@ -479,9 +578,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Medea10JSONHelperO7anyJSONAA03AnyD0OSS4from_tKFZ"></a>
+                    <a name="/s:5Medea10JSONHelperO7anyJSON4fromAA03AnyD0OSS_tKFZ"></a>
                     <a name="//apple_ref/swift/Method/anyJSON(from:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Medea10JSONHelperO7anyJSONAA03AnyD0OSS4from_tKFZ">anyJSON(from:)</a>
+                    <a class="token" href="#/s:5Medea10JSONHelperO7anyJSON4fromAA03AnyD0OSS_tKFZ">anyJSON(from:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -496,7 +595,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">JSONHelper</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">anyJSON</span><span class="p">(</span><span class="n">from</span> <span class="nv">string</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Enums/AnyJSON.html">AnyJSON</a></span></code></pre>
 
                         </div>
                       </div>
@@ -517,9 +616,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Medea10JSONHelperO10jsonObjects10DictionaryVySSypGSS13fromFileNamed_SS9extensionSo6BundleC6bundletKFZ"></a>
+                    <a name="/s:5Medea10JSONHelperO10jsonObject13fromFileNamed9extension6bundleSDySSypGSS_SSSo8NSBundleCtKFZ"></a>
                     <a name="//apple_ref/swift/Method/jsonObject(fromFileNamed:extension:bundle:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Medea10JSONHelperO10jsonObjects10DictionaryVySSypGSS13fromFileNamed_SS9extensionSo6BundleC6bundletKFZ">jsonObject(fromFileNamed:extension:bundle:)</a>
+                    <a class="token" href="#/s:5Medea10JSONHelperO10jsonObject13fromFileNamed9extension6bundleSDySSypGSS_SSSo8NSBundleCtKFZ">jsonObject(fromFileNamed:extension:bundle:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -527,8 +626,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Decodes contents of UTF-8 file into a <code><a href="../Other Typealiases.html#/s:5Medea10JSONObjecta">JSONObject</a></code>.</p>
-
+                        <p>Decodes contents of UTF-8 file into a <code><a href="../Other%20Typealiases.html#/s:5Medea10JSONObjecta">JSONObject</a></code>.</p>
 <div class="aside aside-throws">
     <p class="aside-title">Throws</p>
     <code><a href="../Enums/FileError.html">FileError</a></code> if file is not found or unreadable. <code><a href="../Enums/JSONError.html">JSONError</a></code> if file cannot be parsed as a JSON object.
@@ -540,9 +638,56 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">jsonObject</span><span class="p">(</span><span class="n">fromFileNamed</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">extension</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"json"</span><span class="p">,</span> <span class="nv">bundle</span><span class="p">:</span> <span class="kt">Bundle</span> <span class="o">=</span> <span class="kt">Bundle</span><span class="o">.</span><span class="n">main</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Other Typealiases.html#/s:5Medea10JSONObjecta">JSONObject</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">jsonObject</span><span class="p">(</span><span class="n">fromFileNamed</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">extension</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"json"</span><span class="p">,</span> <span class="nv">bundle</span><span class="p">:</span> <span class="kt">Bundle</span> <span class="o">=</span> <span class="kt">Bundle</span><span class="o">.</span><span class="n">main</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Other%20Typealiases.html#/s:5Medea10JSONObjecta">JSONObject</a></span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>name</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Name of the file in the given <code>bundle</code> to decode.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>extension</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Extension to use with <code>name</code>. Defaults to <q>json</q>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>bundle</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Bundle to search for file named <code>name</code>. Defaults to <code>Bundle.main</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code><a href="../Other%20Typealiases.html#/s:5Medea10JSONObjecta">JSONObject</a></code> representation of data in file.</p>
                       </div>
                     </section>
                   </div>
@@ -550,9 +695,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Medea10JSONHelperO9jsonArraySayypGSS13fromFileNamed_SS9extensionSo6BundleC6bundletKFZ"></a>
+                    <a name="/s:5Medea10JSONHelperO9jsonArray13fromFileNamed9extension6bundleSayypGSS_SSSo8NSBundleCtKFZ"></a>
                     <a name="//apple_ref/swift/Method/jsonArray(fromFileNamed:extension:bundle:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Medea10JSONHelperO9jsonArraySayypGSS13fromFileNamed_SS9extensionSo6BundleC6bundletKFZ">jsonArray(fromFileNamed:extension:bundle:)</a>
+                    <a class="token" href="#/s:5Medea10JSONHelperO9jsonArray13fromFileNamed9extension6bundleSayypGSS_SSSo8NSBundleCtKFZ">jsonArray(fromFileNamed:extension:bundle:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -560,8 +705,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Decodes contents of UTF-8 file into a into a <code><a href="../Other Typealiases.html#/s:5Medea9JSONArraya">JSONArray</a></code>.</p>
-
+                        <p>Decodes contents of UTF-8 file into a into a <code><a href="../Other%20Typealiases.html#/s:5Medea9JSONArraya">JSONArray</a></code>.</p>
 <div class="aside aside-throws">
     <p class="aside-title">Throws</p>
     <code><a href="../Enums/FileError.html">FileError</a></code> if file is not found or unreadable. <code><a href="../Enums/JSONError.html">JSONError</a></code> if file cannot be parsed as a JSON array.
@@ -573,9 +717,56 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">jsonArray</span><span class="p">(</span><span class="n">fromFileNamed</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">extension</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"json"</span><span class="p">,</span> <span class="nv">bundle</span><span class="p">:</span> <span class="kt">Bundle</span> <span class="o">=</span> <span class="kt">Bundle</span><span class="o">.</span><span class="n">main</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Other Typealiases.html#/s:5Medea9JSONArraya">JSONArray</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">jsonArray</span><span class="p">(</span><span class="n">fromFileNamed</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">extension</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"json"</span><span class="p">,</span> <span class="nv">bundle</span><span class="p">:</span> <span class="kt">Bundle</span> <span class="o">=</span> <span class="kt">Bundle</span><span class="o">.</span><span class="n">main</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Other%20Typealiases.html#/s:5Medea9JSONArraya">JSONArray</a></span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>name</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Name of the file in the given <code>bundle</code> to decode.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>extension</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Extension to use with <code>name</code>. Defaults to <q>json</q>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>bundle</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Bundle to search for file named <code>name</code>. Defaults to <code>Bundle.main</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code><a href="../Other%20Typealiases.html#/s:5Medea9JSONArraya">JSONArray</a></code> representation of data in file.</p>
                       </div>
                     </section>
                   </div>
@@ -583,9 +774,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Medea10JSONHelperO7anyJSONAA03AnyD0OSS13fromFileNamed_SS9extensionSo6BundleC6bundletKFZ"></a>
+                    <a name="/s:5Medea10JSONHelperO7anyJSON13fromFileNamed9extension6bundleAA03AnyD0OSS_SSSo8NSBundleCtKFZ"></a>
                     <a name="//apple_ref/swift/Method/anyJSON(fromFileNamed:extension:bundle:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Medea10JSONHelperO7anyJSONAA03AnyD0OSS13fromFileNamed_SS9extensionSo6BundleC6bundletKFZ">anyJSON(fromFileNamed:extension:bundle:)</a>
+                    <a class="token" href="#/s:5Medea10JSONHelperO7anyJSON13fromFileNamed9extension6bundleAA03AnyD0OSS_SSSo8NSBundleCtKFZ">anyJSON(fromFileNamed:extension:bundle:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -594,19 +785,16 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Decodes contents of UTF-8 as JSON.</p>
-
 <div class="aside aside-note">
     <p class="aside-title">Note</p>
     <p>While this will parse files a file as a string, a numbers or even just <code>null</code>, there are probably more efficient ways of doing this than going through a JSON deserializer.</p>
 
 </div>
-
 <div class="aside aside-seealso">
     <p class="aside-title">Seealso</p>
     <p><code>jsonObject(fromFileNamed:extension:bundle)</code> and <code>jsonArray(fromFileNamed:extension:bundle)</code></p>
 
 </div>
-
 <div class="aside aside-throws">
     <p class="aside-title">Throws</p>
     <p><code><a href="../Enums/FileError.html">FileError</a></code> if file is not found or unreadable. <code><a href="../Enums/JSONError.html">JSONError</a></code> if file cannot be parsed as JSON.</p>
@@ -618,9 +806,56 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">anyJSON</span><span class="p">(</span><span class="n">fromFileNamed</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">extension</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"json"</span><span class="p">,</span> <span class="nv">bundle</span><span class="p">:</span> <span class="kt">Bundle</span> <span class="o">=</span> <span class="kt">Bundle</span><span class="o">.</span><span class="n">main</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Enums/AnyJSON.html">AnyJSON</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">anyJSON</span><span class="p">(</span><span class="n">fromFileNamed</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">extension</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"json"</span><span class="p">,</span> <span class="nv">bundle</span><span class="p">:</span> <span class="kt">Bundle</span> <span class="o">=</span> <span class="kt">Bundle</span><span class="o">.</span><span class="n">main</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Enums/AnyJSON.html">AnyJSON</a></span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>name</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Name of the file in the given <code>bundle</code> to decode.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>extension</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Extension to use with <code>name</code>. Defaults to <q>json</q>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>bundle</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Bundle to search for file named <code>name</code>. Defaults to <code>Bundle.main</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An <code><a href="../Enums/AnyJSON.html">AnyJSON</a></code> representation of data in file.</p>
                       </div>
                     </section>
                   </div>
@@ -639,9 +874,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Medea10JSONHelperO4data10Foundation4DataVs10DictionaryVySSypG4from_tKFZ"></a>
+                    <a name="/s:5Medea10JSONHelperO4data4from10Foundation4DataVSDySSypG_tKFZ"></a>
                     <a name="//apple_ref/swift/Method/data(from:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Medea10JSONHelperO4data10Foundation4DataVs10DictionaryVySSypG4from_tKFZ">data(from:)</a>
+                    <a class="token" href="#/s:5Medea10JSONHelperO4data4from10Foundation4DataVSDySSypG_tKFZ">data(from:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -649,11 +884,10 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Serializes a <code><a href="../Other Typealiases.html#/s:5Medea10JSONObjecta">JSONObject</a></code> into <code>Data</code>.</p>
-
+                        <p>Serializes a <code><a href="../Other%20Typealiases.html#/s:5Medea10JSONObjecta">JSONObject</a></code> into <code>Data</code>.</p>
 <div class="aside aside-throws">
     <p class="aside-title">Throws</p>
-    <code>JSONError.invalid</code> if <code><a href="../Other Typealiases.html#/s:5Medea10JSONObjecta">JSONObject</a></code> isn&rsquo;t a valid JSON object.
+    <code><a href="../Enums/JSONError.html#/s:5Medea9JSONErrorO11invalidTypeyA2CmF">JSONError.invalidType</a></code> if <code><a href="../Other%20Typealiases.html#/s:5Medea10JSONObjecta">JSONObject</a></code> isn&rsquo;t a valid JSON object.
 
 </div>
 
@@ -662,9 +896,32 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">data</span><span class="p">(</span><span class="n">from</span> <span class="nv">jsonObject</span><span class="p">:</span> <span class="kt"><a href="../Other Typealiases.html#/s:5Medea10JSONObjecta">JSONObject</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Data</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">data</span><span class="p">(</span><span class="n">from</span> <span class="nv">jsonObject</span><span class="p">:</span> <span class="kt"><a href="../Other%20Typealiases.html#/s:5Medea10JSONObjecta">JSONObject</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Data</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>jsonObject</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The JSONObject to serialize.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The bytes of a string representing a JSON object, encoded as UTF-8.</p>
                       </div>
                     </section>
                   </div>
@@ -672,9 +929,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Medea10JSONHelperO4data10Foundation4DataVSayypG4from_tKFZ"></a>
+                    <a name="/s:5Medea10JSONHelperO4data4from10Foundation4DataVAA15ValidJSONObjectV_tFZ"></a>
                     <a name="//apple_ref/swift/Method/data(from:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Medea10JSONHelperO4data10Foundation4DataVSayypG4from_tKFZ">data(from:)</a>
+                    <a class="token" href="#/s:5Medea10JSONHelperO4data4from10Foundation4DataVAA15ValidJSONObjectV_tFZ">data(from:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -682,11 +939,60 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Serializes a <code><a href="../Other Typealiases.html#/s:5Medea9JSONArraya">JSONArray</a></code> into <code>Data</code>.</p>
+                        <p>Serializes a <code><a href="../Structs/ValidJSONObject.html">ValidJSONObject</a></code> into <code>Data</code>. Because it takes a <code><a href="../Structs/ValidJSONObject.html">ValidJSONObject</a></code>, it doesn&rsquo;t throw.</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">data</span><span class="p">(</span><span class="n">from</span> <span class="nv">jsonObject</span><span class="p">:</span> <span class="kt"><a href="../Structs/ValidJSONObject.html">ValidJSONObject</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Data</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>jsonObject</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The <code><a href="../Structs/ValidJSONObject.html">ValidJSONObject</a></code> to serialize.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The bytes of a string representing a JSON object, encoded as UTF-8.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5Medea10JSONHelperO4data4from10Foundation4DataVSayypG_tKFZ"></a>
+                    <a name="//apple_ref/swift/Method/data(from:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Medea10JSONHelperO4data4from10Foundation4DataVSayypG_tKFZ">data(from:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Serializes a <code><a href="../Other%20Typealiases.html#/s:5Medea9JSONArraya">JSONArray</a></code> into <code>Data</code>.</p>
 <div class="aside aside-throws">
     <p class="aside-title">Throws</p>
-    <code>JSONError.invalid</code> if <code><a href="../Other Typealiases.html#/s:5Medea9JSONArraya">JSONArray</a></code> isn&rsquo;t an array of JSON-safe values.
+    <code><a href="../Enums/JSONError.html#/s:5Medea9JSONErrorO11invalidTypeyA2CmF">JSONError.invalidType</a></code> if <code><a href="../Other%20Typealiases.html#/s:5Medea9JSONArraya">JSONArray</a></code> isn&rsquo;t an array of JSON-safe values.
 
 </div>
 
@@ -695,9 +1001,82 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">data</span><span class="p">(</span><span class="n">from</span> <span class="nv">jsonArray</span><span class="p">:</span> <span class="kt"><a href="../Other Typealiases.html#/s:5Medea9JSONArraya">JSONArray</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Data</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">data</span><span class="p">(</span><span class="n">from</span> <span class="nv">jsonArray</span><span class="p">:</span> <span class="kt"><a href="../Other%20Typealiases.html#/s:5Medea9JSONArraya">JSONArray</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Data</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>jsonArray</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The JSONArray to serialize.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The bytes of a string representing a JSON array, encoded as UTF-8.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5Medea10JSONHelperO4data4from10Foundation4DataVAA14ValidJSONArrayV_tFZ"></a>
+                    <a name="//apple_ref/swift/Method/data(from:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Medea10JSONHelperO4data4from10Foundation4DataVAA14ValidJSONArrayV_tFZ">data(from:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Serializes a <code><a href="../Structs/ValidJSONArray.html">ValidJSONArray</a></code> into <code>Data</code>. Because it takes a <code><a href="../Structs/ValidJSONArray.html">ValidJSONArray</a></code>, it doesn&rsquo;t throw.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">data</span><span class="p">(</span><span class="n">from</span> <span class="nv">jsonArray</span><span class="p">:</span> <span class="kt"><a href="../Structs/ValidJSONArray.html">ValidJSONArray</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Data</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>jsonArray</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The <code><a href="../Structs/ValidJSONArray.html">ValidJSONArray</a></code> to serialize.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The bytes of a string representing a JSON array, encoded as UTF-8.</p>
                       </div>
                     </section>
                   </div>
@@ -716,9 +1095,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Medea10JSONHelperO6stringSSs10DictionaryVySSypG4from_tKFZ"></a>
+                    <a name="/s:5Medea10JSONHelperO6string4fromSSSDySSypG_tKFZ"></a>
                     <a name="//apple_ref/swift/Method/string(from:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Medea10JSONHelperO6stringSSs10DictionaryVySSypG4from_tKFZ">string(from:)</a>
+                    <a class="token" href="#/s:5Medea10JSONHelperO6string4fromSSSDySSypG_tKFZ">string(from:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -726,11 +1105,10 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Serializes a <code><a href="../Other Typealiases.html#/s:5Medea10JSONObjecta">JSONObject</a></code> into a <code>String</code>.</p>
-
+                        <p>Serializes a <code><a href="../Other%20Typealiases.html#/s:5Medea10JSONObjecta">JSONObject</a></code> into a <code>String</code>.</p>
 <div class="aside aside-throws">
     <p class="aside-title">Throws</p>
-    <code>JSONError.invalid</code> if <code><a href="../Other Typealiases.html#/s:5Medea10JSONObjecta">JSONObject</a></code> isn&rsquo;t a valid JSON object. <code><a href="../Enums/StringError.html#/s:5Medea11StringErrorO8encodingA2CmF">StringError.encoding</a></code> will be thrown if the serialized JSON can&rsquo;t be represented by a UTF-8 string, but that should be impossible.
+    <code><a href="../Enums/JSONError.html#/s:5Medea9JSONErrorO11invalidTypeyA2CmF">JSONError.invalidType</a></code> if <code><a href="../Other%20Typealiases.html#/s:5Medea10JSONObjecta">JSONObject</a></code> isn&rsquo;t a valid JSON object. <code><a href="../Enums/StringError.html#/s:5Medea11StringErrorO8encodingyA2CmF">StringError.encoding</a></code> will be thrown if the serialized JSON can&rsquo;t be represented by a UTF-8 string, but that should be impossible.
 
 </div>
 
@@ -739,9 +1117,32 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">string</span><span class="p">(</span><span class="n">from</span> <span class="nv">json</span><span class="p">:</span> <span class="kt"><a href="../Other Typealiases.html#/s:5Medea10JSONObjecta">JSONObject</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">string</span><span class="p">(</span><span class="n">from</span> <span class="nv">json</span><span class="p">:</span> <span class="kt"><a href="../Other%20Typealiases.html#/s:5Medea10JSONObjecta">JSONObject</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>jsonObject</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The JSONObject to serialize.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A string representing a JSON object, encoded as UTF-8.</p>
                       </div>
                     </section>
                   </div>
@@ -749,9 +1150,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Medea10JSONHelperO6stringSSSayypG4from_tKFZ"></a>
+                    <a name="/s:5Medea10JSONHelperO6string4fromSSAA15ValidJSONObjectV_tFZ"></a>
                     <a name="//apple_ref/swift/Method/string(from:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Medea10JSONHelperO6stringSSSayypG4from_tKFZ">string(from:)</a>
+                    <a class="token" href="#/s:5Medea10JSONHelperO6string4fromSSAA15ValidJSONObjectV_tFZ">string(from:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -759,11 +1160,60 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Serializes a <code><a href="../Other Typealiases.html#/s:5Medea9JSONArraya">JSONArray</a></code> into a <code>String</code>.</p>
+                        <p>Serializes a <code><a href="../Structs/ValidJSONObject.html">ValidJSONObject</a></code> into a <code>String</code>. Because it takes a <code><a href="../Structs/ValidJSONObject.html">ValidJSONObject</a></code> it doesn&rsquo;t throw.</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">string</span><span class="p">(</span><span class="n">from</span> <span class="nv">json</span><span class="p">:</span> <span class="kt"><a href="../Structs/ValidJSONObject.html">ValidJSONObject</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>jsonObject</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The <code><a href="../Structs/ValidJSONObject.html">ValidJSONObject</a></code> to serialize.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A string representing a JSON object, encoded as UTF-8.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5Medea10JSONHelperO6string4fromSSSayypG_tKFZ"></a>
+                    <a name="//apple_ref/swift/Method/string(from:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Medea10JSONHelperO6string4fromSSSayypG_tKFZ">string(from:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Serializes a <code><a href="../Other%20Typealiases.html#/s:5Medea9JSONArraya">JSONArray</a></code> into a <code>String</code>.</p>
 <div class="aside aside-throws">
     <p class="aside-title">Throws</p>
-    <code>JSONError.invalid</code> if <code><a href="../Other Typealiases.html#/s:5Medea9JSONArraya">JSONArray</a></code> isn&rsquo;t an array of JSON-safe values. <code><a href="../Enums/StringError.html#/s:5Medea11StringErrorO8encodingA2CmF">StringError.encoding</a></code> will be thrown if the serialized JSON can&rsquo;t be represented by a UTF-8 string, but that should be impossible.
+    <code><a href="../Enums/JSONError.html#/s:5Medea9JSONErrorO11invalidTypeyA2CmF">JSONError.invalidType</a></code> if <code><a href="../Other%20Typealiases.html#/s:5Medea9JSONArraya">JSONArray</a></code> isn&rsquo;t an array of JSON-safe values. <code><a href="../Enums/StringError.html#/s:5Medea11StringErrorO8encodingyA2CmF">StringError.encoding</a></code> will be thrown if the serialized JSON can&rsquo;t be represented by a UTF-8 string, but that should be impossible.
 
 </div>
 
@@ -772,9 +1222,82 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">string</span><span class="p">(</span><span class="n">from</span> <span class="nv">json</span><span class="p">:</span> <span class="kt"><a href="../Other Typealiases.html#/s:5Medea9JSONArraya">JSONArray</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">string</span><span class="p">(</span><span class="n">from</span> <span class="nv">json</span><span class="p">:</span> <span class="kt"><a href="../Other%20Typealiases.html#/s:5Medea9JSONArraya">JSONArray</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>jsonArray</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The JSONArray to serialize.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A string representing a JSON array, encoded as UTF-8.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5Medea10JSONHelperO6string4fromSSAA14ValidJSONArrayV_tFZ"></a>
+                    <a name="//apple_ref/swift/Method/string(from:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Medea10JSONHelperO6string4fromSSAA14ValidJSONArrayV_tFZ">string(from:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Serializes a <code><a href="../Structs/ValidJSONArray.html">ValidJSONArray</a></code> into a <code>String</code>. Because it takes a <code><a href="../Structs/ValidJSONArray.html">ValidJSONArray</a></code>, it doesn&rsquo;t throw.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">string</span><span class="p">(</span><span class="n">from</span> <span class="nv">json</span><span class="p">:</span> <span class="kt"><a href="../Structs/ValidJSONArray.html">ValidJSONArray</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>jsonArray</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The <code><a href="../Structs/ValidJSONArray.html">ValidJSONArray</a></code> to serialize.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A string representing a JSON array, encoded as UTF-8.</p>
                       </div>
                     </section>
                   </div>
@@ -793,9 +1316,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Medea10JSONHelperO7isValidSbSSFZ"></a>
+                    <a name="/s:5Medea10JSONHelperO7isValidySbSSFZ"></a>
                     <a name="//apple_ref/swift/Method/isValid(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Medea10JSONHelperO7isValidSbSSFZ">isValid(_:)</a>
+                    <a class="token" href="#/s:5Medea10JSONHelperO7isValidySbSSFZ">isValid(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -804,7 +1327,6 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Validates whether the given <code>String</code> is valid JSON text.</p>
-
 <div class="aside aside-note">
     <p class="aside-title">Note</p>
     <p>While this could be used to (redundantly?) validate a string-type JSON value, it is more usefully applied to JSON serialized as a string.</p>
@@ -816,9 +1338,32 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">isValid</span><span class="p">(</span><span class="n">_</span> <span class="nv">jsonText</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">isValid</span><span class="p">(</span><span class="n">_</span> <span class="nv">jsonText</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>string</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The JSON text to validate.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>true</code> if the string represents valid JSON. Otherwise: <code>false</code>.</p>
                       </div>
                     </section>
                   </div>
@@ -826,9 +1371,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Medea10JSONHelperO7isValidSb10Foundation4DataVFZ"></a>
+                    <a name="/s:5Medea10JSONHelperO7isValidySb10Foundation4DataVFZ"></a>
                     <a name="//apple_ref/swift/Method/isValid(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Medea10JSONHelperO7isValidSb10Foundation4DataVFZ">isValid(_:)</a>
+                    <a class="token" href="#/s:5Medea10JSONHelperO7isValidySb10Foundation4DataVFZ">isValid(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -843,9 +1388,32 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">isValid</span><span class="p">(</span><span class="n">_</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">isValid</span><span class="p">(</span><span class="n">_</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>data</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The bytes to validate.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>true</code> if <code>data</code> represents the bytes of a UTF-8 encoded string, and said string depicts valid JSON. Otherwise: <code>false</code>.</p>
                       </div>
                     </section>
                   </div>
@@ -853,9 +1421,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Medea10JSONHelperO7isValidSbs10DictionaryVySSypGFZ"></a>
+                    <a name="/s:5Medea10JSONHelperO7isValidySbSDySSypGFZ"></a>
                     <a name="//apple_ref/swift/Method/isValid(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Medea10JSONHelperO7isValidSbs10DictionaryVySSypGFZ">isValid(_:)</a>
+                    <a class="token" href="#/s:5Medea10JSONHelperO7isValidySbSDySSypGFZ">isValid(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -863,16 +1431,39 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Validates whether the given <code><a href="../Other Typealiases.html#/s:5Medea10JSONObjecta">JSONObject</a></code> contains only valid JSON types.</p>
+                        <p>Validates whether the given <code><a href="../Other%20Typealiases.html#/s:5Medea10JSONObjecta">JSONObject</a></code> contains only valid JSON types.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">isValid</span><span class="p">(</span><span class="n">_</span> <span class="nv">jsonObject</span><span class="p">:</span> <span class="kt"><a href="../Other Typealiases.html#/s:5Medea10JSONObjecta">JSONObject</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">isValid</span><span class="p">(</span><span class="n">_</span> <span class="nv">jsonObject</span><span class="p">:</span> <span class="kt"><a href="../Other%20Typealiases.html#/s:5Medea10JSONObjecta">JSONObject</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>jsonObject</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The object to validate.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>true</code> if <code>jsonObject</code> contains only types representable in JSON. Otherwise: <code>false</code>.</p>
                       </div>
                     </section>
                   </div>
@@ -880,9 +1471,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Medea10JSONHelperO7isValidSbSayypGFZ"></a>
+                    <a name="/s:5Medea10JSONHelperO7isValidySbSayypGFZ"></a>
                     <a name="//apple_ref/swift/Method/isValid(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Medea10JSONHelperO7isValidSbSayypGFZ">isValid(_:)</a>
+                    <a class="token" href="#/s:5Medea10JSONHelperO7isValidySbSayypGFZ">isValid(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -890,16 +1481,39 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Validates whether the given <code><a href="../Other Typealiases.html#/s:5Medea9JSONArraya">JSONArray</a></code> contains only valid JSON types.</p>
+                        <p>Validates whether the given <code><a href="../Other%20Typealiases.html#/s:5Medea9JSONArraya">JSONArray</a></code> contains only valid JSON types.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">isValid</span><span class="p">(</span><span class="n">_</span> <span class="nv">jsonArray</span><span class="p">:</span> <span class="kt"><a href="../Other Typealiases.html#/s:5Medea9JSONArraya">JSONArray</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">isValid</span><span class="p">(</span><span class="n">_</span> <span class="nv">jsonArray</span><span class="p">:</span> <span class="kt"><a href="../Other%20Typealiases.html#/s:5Medea9JSONArraya">JSONArray</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>jsonArray</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The array to validate.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>true</code> if <code>jsonArray</code> contains only types representable in JSON. Otherwise: <code>false</code>.</p>
                       </div>
                     </section>
                   </div>
@@ -907,9 +1521,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Medea10JSONHelperO8validateySSKFZ"></a>
+                    <a name="/s:5Medea10JSONHelperO8validateyySSKFZ"></a>
                     <a name="//apple_ref/swift/Method/validate(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Medea10JSONHelperO8validateySSKFZ">validate(_:)</a>
+                    <a class="token" href="#/s:5Medea10JSONHelperO8validateyySSKFZ">validate(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -918,16 +1532,14 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Validates whether the given <code>String</code> is well-formed JSON text, throwing if it&rsquo;s not.</p>
-
 <div class="aside aside-note">
     <p class="aside-title">Note</p>
     <p>While this could be used to (redundantly?) validate a string-type JSON value, it is more usefully applied to JSON serialized as a string.</p>
 
 </div>
-
 <div class="aside aside-throws">
     <p class="aside-title">Throws</p>
-    <p><code><a href="../Enums/JSONError.html#/s:5Medea9JSONErrorO9malformedA2CmF">JSONError.malformed</a></code> if <code>string</code> cannot be parsed as JSON.</p>
+    <p><code><a href="../Enums/JSONError.html#/s:5Medea9JSONErrorO9malformedyA2CmF">JSONError.malformed</a></code> if <code>string</code> cannot be parsed as JSON.</p>
 
 </div>
 
@@ -936,9 +1548,28 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">validate</span><span class="p">(</span><span class="n">_</span> <span class="nv">string</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">validate</span><span class="p">(</span><span class="n">_</span> <span class="nv">string</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>string</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The string to validate.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -946,9 +1577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Medea10JSONHelperO8validatey10Foundation4DataVKFZ"></a>
+                    <a name="/s:5Medea10JSONHelperO8validateyy10Foundation4DataVKFZ"></a>
                     <a name="//apple_ref/swift/Method/validate(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Medea10JSONHelperO8validatey10Foundation4DataVKFZ">validate(_:)</a>
+                    <a class="token" href="#/s:5Medea10JSONHelperO8validateyy10Foundation4DataVKFZ">validate(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -957,10 +1588,9 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Validates whether the given bytes represent well-formed JSON text, throwing if they do not.</p>
-
 <div class="aside aside-throws">
     <p class="aside-title">Throws</p>
-    Standard <code>Error</code> if <code>data</code> is unreadable or not UTF-8. <code><a href="../Enums/JSONError.html#/s:5Medea9JSONErrorO9malformedA2CmF">JSONError.malformed</a></code> if <code>data</code> cannot be parsed as JSON.
+    Standard <code>Error</code> if <code>data</code> is unreadable or not UTF-8. <code><a href="../Enums/JSONError.html#/s:5Medea9JSONErrorO9malformedyA2CmF">JSONError.malformed</a></code> if <code>data</code> cannot be parsed as JSON.
 
 </div>
 
@@ -969,9 +1599,28 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">validate</span><span class="p">(</span><span class="n">_</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">validate</span><span class="p">(</span><span class="n">_</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">)</span> <span class="k">throws</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>data</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The bytes to validate.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -979,9 +1628,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Medea10JSONHelperO8validateys10DictionaryVySSypGKFZ"></a>
+                    <a name="/s:5Medea10JSONHelperO8validateyySDySSypGKFZ"></a>
                     <a name="//apple_ref/swift/Method/validate(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Medea10JSONHelperO8validateys10DictionaryVySSypGKFZ">validate(_:)</a>
+                    <a class="token" href="#/s:5Medea10JSONHelperO8validateyySDySSypGKFZ">validate(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -989,11 +1638,10 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Validates whether the given <code><a href="../Other Typealiases.html#/s:5Medea10JSONObjecta">JSONObject</a></code> contains only valid JSON types, throwing if it does not.</p>
-
+                        <p>Validates whether the given <code><a href="../Other%20Typealiases.html#/s:5Medea10JSONObjecta">JSONObject</a></code> contains only valid JSON types, throwing if it does not.</p>
 <div class="aside aside-throws">
     <p class="aside-title">Throws</p>
-    <code>JSONError.invalid</code> if <code><a href="../Other Typealiases.html#/s:5Medea10JSONObjecta">JSONObject</a></code> isn&rsquo;t a valid JSON object.
+    <code>JSONError.invalid</code> if <code><a href="../Other%20Typealiases.html#/s:5Medea10JSONObjecta">JSONObject</a></code> isn&rsquo;t a valid JSON object.
 
 </div>
 
@@ -1002,9 +1650,28 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">validate</span><span class="p">(</span><span class="n">_</span> <span class="nv">jsonObject</span><span class="p">:</span> <span class="kt"><a href="../Other Typealiases.html#/s:5Medea10JSONObjecta">JSONObject</a></span><span class="p">)</span> <span class="k">throws</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">validate</span><span class="p">(</span><span class="n">_</span> <span class="nv">jsonObject</span><span class="p">:</span> <span class="kt"><a href="../Other%20Typealiases.html#/s:5Medea10JSONObjecta">JSONObject</a></span><span class="p">)</span> <span class="k">throws</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>jsonObject</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The object to validate.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -1012,9 +1679,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Medea10JSONHelperO8validateySayypGKFZ"></a>
+                    <a name="/s:5Medea10JSONHelperO8validateyySayypGKFZ"></a>
                     <a name="//apple_ref/swift/Method/validate(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Medea10JSONHelperO8validateySayypGKFZ">validate(_:)</a>
+                    <a class="token" href="#/s:5Medea10JSONHelperO8validateyySayypGKFZ">validate(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1022,11 +1689,10 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Validates whether the given <code><a href="../Other Typealiases.html#/s:5Medea9JSONArraya">JSONArray</a></code> contains only valid JSON types, throwing if it does not.</p>
-
+                        <p>Validates whether the given <code><a href="../Other%20Typealiases.html#/s:5Medea9JSONArraya">JSONArray</a></code> contains only valid JSON types, throwing if it does not.</p>
 <div class="aside aside-throws">
     <p class="aside-title">Throws</p>
-    <code>JSONError.invalid</code> if <code><a href="../Other Typealiases.html#/s:5Medea9JSONArraya">JSONArray</a></code> isn&rsquo;t an array of JSON-safe values.
+    <code>JSONError.invalid</code> if <code><a href="../Other%20Typealiases.html#/s:5Medea9JSONArraya">JSONArray</a></code> isn&rsquo;t an array of JSON-safe values.
 
 </div>
 
@@ -1035,9 +1701,28 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">validate</span><span class="p">(</span><span class="n">_</span> <span class="nv">jsonArray</span><span class="p">:</span> <span class="kt"><a href="../Other Typealiases.html#/s:5Medea9JSONArraya">JSONArray</a></span><span class="p">)</span> <span class="k">throws</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">validate</span><span class="p">(</span><span class="n">_</span> <span class="nv">jsonArray</span><span class="p">:</span> <span class="kt"><a href="../Other%20Typealiases.html#/s:5Medea9JSONArraya">JSONArray</a></span><span class="p">)</span> <span class="k">throws</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>jsonArray</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The array to validate.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -1047,8 +1732,8 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2017 <a class="link" href="https://figure.ink" target="_blank" rel="external">Joshua Emmons</a>. All rights reserved. (Last updated: 2017-09-14)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.5</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2019 <a class="link" href="https://figure.ink" target="_blank" rel="external">Joshua Emmons</a>. All rights reserved. (Last updated: 2019-09-16)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.11.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>
