@@ -1,6 +1,6 @@
 # Medea
 
-[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![SwiftPM compatible](https://img.shields.io/badge/SwiftPM-compatible-success)](https://github.com/Apple/swift-package-manager)
 [![API docs](https://jemmons.github.io/Medea/badge.svg)](https://jemmons.github.io/Medea/Enums/JSONHelper.html)
 
 A bag of functions (living in `JSONHelper`) for converting to and from JSON representations. It's a *very* thin wrapper around `JSONSerialization` that also:
