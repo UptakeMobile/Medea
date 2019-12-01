@@ -1,7 +1,10 @@
 # Medea
 
-[![SwiftPM compatible](https://img.shields.io/badge/SwiftPM-compatible-success)](https://github.com/Apple/swift-package-manager)
-[![API docs](https://jemmons.github.io/Medea/badge.svg)](https://jemmons.github.io/Medea/Enums/JSONHelper.html)
+[![Swift Package](https://img.shields.io/static/v1?label=Swift&message=Package&logo=Swift&color=fa7343&style=flat)](https://github.com/Apple/swift-package-manager)
+[![Documentation](https://jemmons.github.io/Medea/badge.svg)](https://jemmons.github.io/Medea/Enums/JSONHelper.html)
+[![Tests](https://github.com/jemmons/Medea/workflows/master/badge.svg)](https://github.com/jemmons/Medea/actions?query=workflow%3A%22master%22)
+[![Maintainability](https://api.codeclimate.com/v1/badges/ebe6d495ac3e3c1666a4/maintainability)](https://codeclimate.com/github/jemmons/Medea/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/ebe6d495ac3e3c1666a4/test_coverage)](https://codeclimate.com/github/jemmons/Medea/test_coverage)
 
 A bag of functions (living in `JSONHelper`) for converting to and from JSON representations. It's a *very* thin wrapper around `JSONSerialization` that also:
  
