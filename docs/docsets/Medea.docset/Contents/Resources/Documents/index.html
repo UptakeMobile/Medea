@@ -13,7 +13,7 @@
     <a title="Medea  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">Medea Docs</a> (55% documented)</p>
+        <p><a href="index.html">Medea Docs</a> (54% documented)</p>
         <p class="header-right"><a href="https://github.com/jemmons/Medea"><img src="img/gh.png"/>View on GitHub</a></p>
         <p class="header-right"><a href="dash-feed://https%3A%2F%2Fjemmons%2Egithub%2Eio%2FMedea%2Fdocsets%2FMedea%2Exml"><img src="img/dash.png"/>Install in Dash</a></p>
       </div>
@@ -29,7 +29,7 @@
       <nav class="sidebar">
         <ul class="nav-groups">
           <li class="nav-group-name">
-            <a href="Public Interface.html">Public Interface</a>
+            <a href="Public%20Interface.html">Public Interface</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="Enums/JSONHelper.html">JSONHelper</a>
@@ -37,7 +37,7 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="Other Enums.html">Other Enums</a>
+            <a href="Other%20Enums.html">Other Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="Enums/AnyJSON.html">AnyJSON</a>
@@ -54,13 +54,24 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="Other Typealiases.html">Other Typealiases</a>
+            <a href="Other%20Structs.html">Other Structures</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Other Typealiases.html#/s:5Medea9JSONArraya">JSONArray</a>
+                <a href="Structs/ValidJSONArray.html">ValidJSONArray</a>
               </li>
               <li class="nav-group-task">
-                <a href="Other Typealiases.html#/s:5Medea10JSONObjecta">JSONObject</a>
+                <a href="Structs/ValidJSONObject.html">ValidJSONObject</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Other%20Typealiases.html">Other Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Other%20Typealiases.html#/s:5Medea9JSONArraya">JSONArray</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Other%20Typealiases.html#/s:5Medea10JSONObjecta">JSONObject</a>
               </li>
             </ul>
           </li>
@@ -70,42 +81,45 @@
         <section>
           <section class="section">
             
-            <a href='#medea' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='medea'>Medea</h1>
+            <h1 id='medea' class='heading'>Medea</h1>
 
-<p><a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage compatible"></a>
-<a href="https://jemmons.github.io/Medea/Enums/JSONHelper.html"><img src="https://jemmons.github.io/Medea/badge.svg" alt="API docs"></a></p>
+<p><a href="https://github.com/Apple/swift-package-manager"><img src="https://img.shields.io/static/v1?label=Swift&message=Package&logo=Swift&color=fa7343&style=flat" alt="Swift Package"></a>
+<a href="https://jemmons.github.io/Medea/Enums/JSONHelper.html"><img src="https://jemmons.github.io/Medea/badge.svg" alt="Documentation"></a>
+<a href="https://github.com/jemmons/Medea/actions?query=workflow%3A%22master%22"><img src="https://github.com/jemmons/Medea/workflows/master/badge.svg" alt="Tests"></a>
+<a href="https://codeclimate.com/github/jemmons/Medea/maintainability"><img src="https://api.codeclimate.com/v1/badges/ebe6d495ac3e3c1666a4/maintainability" alt="Maintainability"></a>
+<a href="https://codeclimate.com/github/jemmons/Medea/test_coverage"><img src="https://api.codeclimate.com/v1/badges/ebe6d495ac3e3c1666a4/test_coverage" alt="Test Coverage"></a></p>
 
-<p>A bag of functions (living in <code>JSONHelper</code>) for converting to and from JSON representations. It&rsquo;s a <em>very</em> thin wrapper around <code>JSONSerialization</code> that also:</p>
+<p>A bag of functions (living in <code><a href="Enums/JSONHelper.html">JSONHelper</a></code>) for converting to and from JSON representations. It&rsquo;s a <em>very</em> thin wrapper around <code>JSONSerialization</code> that also:</p>
 
 <ul>
 <li><p>Is <em>explicit</em> about whether JSON is expected to be an object or an array, throwing an error if an unexpected type is encountered.</p></li>
 <li><p>Handles all the conversions between <code>Data</code> and <code>String</code>, eliminating a lot of <code>Optional</code>s and <code>guards</code> in the process.</p></li>
-<li><p>Converts some common <code>JSONSerialization</code> errors out of the <code>NSCocoaErrorDomain</code> and into the easier-to-catch <code>JSONError</code> enum.</p></li>
-<li><p>Provides convenience types for <code>JSONObject</code> and <code>JSONArray</code> to save you from having to make sense of oblique <code>Any</code>s.</p></li>
-<li><p>Provides easy validation functions for verifying <code>Data</code>s, <code>String</code>s, <code>JSONObject</code>s or <code>JSONArray</code>s represent well-formed JSON — without having to chain a bunch of conversions and <code>try</code>.</p></li>
+<li><p>Converts some common <code>JSONSerialization</code> errors out of the <code>NSCocoaErrorDomain</code> and into the easier-to-catch <code><a href="Enums/JSONError.html">JSONError</a></code> enum.</p></li>
+<li><p>Provides convenience types for <code><a href="Other%20Typealiases.html#/s:5Medea10JSONObjecta">JSONObject</a></code> and <code><a href="Other%20Typealiases.html#/s:5Medea9JSONArraya">JSONArray</a></code> to save you from having to make sense of oblique <code>Any</code>s.</p></li>
+<li><p>Provides easy validation functions for verifying <code>Data</code>s, <code>String</code>s, <code><a href="Other%20Typealiases.html#/s:5Medea10JSONObjecta">JSONObject</a></code>s or <code><a href="Other%20Typealiases.html#/s:5Medea9JSONArraya">JSONArray</a></code>s represent well-formed JSON — without having to chain a bunch of conversions and <code>try</code>.</p></li>
 </ul>
-<a href='#usage' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='usage'>Usage</h2>
-<a href='#from-json' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='from-json'>From JSON:</h3>
+<h2 id='usage' class='heading'>Usage</h2>
+<h3 id='from-json' class='heading'>From JSON:</h3>
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">object</span>  <span class="o">=</span> <span class="k">try</span> <span class="kt">JSONHelper</span><span class="o">.</span><span class="nf">jsonObject</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="s">"{</span><span class="se">\"</span><span class="s">foo</span><span class="se">\"</span><span class="s">: 42}"</span><span class="p">)</span>
 <span class="k">let</span> <span class="nv">array</span>   <span class="o">=</span> <span class="k">try</span> <span class="kt">JSONHelper</span><span class="o">.</span><span class="nf">jsonArray</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="s">"[42, 64, 10175]"</span><span class="p">)</span>
 <span class="k">let</span> <span class="nv">isValid</span> <span class="o">=</span> <span class="kt">JSONHelper</span><span class="o">.</span><span class="nf">isValid</span><span class="p">(</span><span class="s">"{</span><span class="se">\"</span><span class="s">numbers</span><span class="se">\"</span><span class="s">: [1,2,3]}"</span><span class="p">)</span>
 <span class="k">try</span> <span class="kt">JSONHelper</span><span class="o">.</span><span class="nf">validate</span><span class="p">(</span><span class="s">"[1,true,null]"</span><span class="p">)</span>
 </code></pre>
-<a href='#to-json' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='to-json'>To JSON:</h3>
+<h3 id='to-json' class='heading'>To JSON:</h3>
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">jsonString</span> <span class="o">=</span> <span class="k">try</span> <span class="kt">JSONHelper</span><span class="o">.</span><span class="nf">string</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="p">[</span><span class="s">"foo"</span><span class="p">:</span> <span class="mi">42</span><span class="p">])</span>
 <span class="k">let</span> <span class="nv">jsonData</span>   <span class="o">=</span> <span class="k">try</span> <span class="kt">JSONHelper</span><span class="o">.</span><span class="nf">data</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="p">[</span><span class="mi">42</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">10175</span><span class="p">])</span>
 <span class="k">let</span> <span class="nv">isValid</span>    <span class="o">=</span> <span class="kt">JSONHelper</span><span class="o">.</span><span class="nf">isValid</span><span class="p">([</span><span class="s">"invalid"</span><span class="p">:</span> <span class="kt">Date</span><span class="p">()])</span>
 <span class="k">try</span> <span class="kt">JSONHelper</span><span class="o">.</span><span class="nf">validate</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="kc">true</span><span class="p">,</span> <span class="kt">NSNull</span><span class="p">()])</span>
 </code></pre>
-<a href='#api' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='api'>API</h2>
+<h2 id='api' class='heading'>API</h2>
 
 <p>Full API documentation <a href="https://jemmons.github.io/Medea/Enums/JSONHelper.html">can be found here</a>.</p>
 
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2017 <a class="link" href="https://figure.ink" target="_blank" rel="external">Joshua Emmons</a>. All rights reserved. (Last updated: 2017-09-14)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.5</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2019 <a class="link" href="https://figure.ink" target="_blank" rel="external">Joshua Emmons</a>. All rights reserved. (Last updated: 2019-12-01)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.12.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>
